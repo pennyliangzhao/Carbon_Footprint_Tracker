@@ -27,6 +27,11 @@ public class ProfilePage extends AppCompatActivity {
         }
     }
 
+    public void settingsBtnClick(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
     public void avatarBTN(View view){
         Intent intent = new Intent(this, MyCameraActivity.class);
         startActivity(intent);
