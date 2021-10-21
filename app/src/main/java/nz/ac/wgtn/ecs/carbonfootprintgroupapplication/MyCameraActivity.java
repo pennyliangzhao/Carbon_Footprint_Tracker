@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class MyCameraActivity extends Activity
 {
     private static final int CAMERA_REQUEST = 1888;
     private ImageView imageView;
+    private ImageView profileOne;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
 
     @Override
@@ -25,8 +27,9 @@ public class MyCameraActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_camera);
-        this.imageView = (ImageView)this.findViewById(R.id.imageView1);
-        Button photoButton = (Button) this.findViewById(R.id.button1);
+        this.imageView = this.findViewById(R.id.imageView1);
+        Button photoButton = this.findViewById(R.id.button1);
+        profileOne = findViewById(R.id.profile1);
         photoButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -43,6 +46,13 @@ public class MyCameraActivity extends Activity
                 }
             }
         });
+    }
+
+    public void profileOneClick(View view) {
+        ImageView iv = (ImageView)view;
+        BitmapDrawable drawable = (BitmapDrawable) iv.getBackground();
+        Bitmap bitmap = drawable.getBitmap();
+        goBackToSetting(bitmap);
     }
 
     @Override
@@ -71,6 +81,13 @@ public class MyCameraActivity extends Activity
         {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(photo);
+            goBackToSetting(photo);
         }
+    }
+
+    private void goBackToSetting(Bitmap photo) {
+        Intent intent = new Intent(this, ProfilePage.class);
+        intent.putExtra("profile_picture", photo);
+        startActivity(intent);
     }
 }

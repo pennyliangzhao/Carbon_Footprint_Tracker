@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyCameraActivity">
+    tools:context=".ProfilePage">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -16,21 +16,18 @@
 
         <ImageView
             android:id="@+id/profile1"
-            android:layout_width="377dp"
-            android:layout_height="124dp"
-            app:srcCompat="@drawable/john" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/_john"
+            android:onClick="profileOneClick" />
 
         <ImageView
             android:id="@+id/profile2"
-            android:layout_width="383dp"
-            android:layout_height="144dp"
-            app:srcCompat="@drawable/mary" />
-
-        <ImageView
-            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"></ImageView>
-
+            android:background="@drawable/_mary"
+            android:layout_gravity="center"/>
 
         <Button
             android:id="@+id/button1"
@@ -38,7 +35,9 @@
             android:layout_height="wrap_content"
             android:text="@string/photo"></Button>
 
-
-
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"></ImageView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
