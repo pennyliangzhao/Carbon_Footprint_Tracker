@@ -16,6 +16,7 @@ public class MenuPage extends AppCompatActivity {
 
     public void profilePageButton(View view){
         Intent intent = new Intent(this,ProfilePage.class);
+        intent.putExtra("profile_picture","IMG");
         startActivity(intent);
     }
 
