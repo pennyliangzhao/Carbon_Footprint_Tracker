@@ -44,7 +44,6 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="@string/email_address"
-        android:hintTextColor="#263238"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
@@ -55,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        />
 
     <EditText
         android:id="@+id/password"
@@ -63,12 +62,9 @@
         android:layout_height="51dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="@string/password"
-        android:hintTextColor="#263238"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
-        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
