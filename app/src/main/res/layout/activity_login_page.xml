@@ -44,6 +44,7 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="@string/email_address"
+        android:hintTextColor="#263238"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
@@ -53,7 +54,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password"
@@ -62,6 +64,7 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="@string/password"
+        android:hintTextColor="#263238"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
@@ -71,7 +74,8 @@
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.61"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/buttonLogin"
@@ -140,7 +144,8 @@
         android:id="@+id/tvError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textview"
+        android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"

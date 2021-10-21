@@ -9,7 +9,7 @@
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_action_recorder_page.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_carbon_footprint_recorder.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_food_record_page.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_login_page.xml" value="0.22" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_login_page.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_logout_page.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_menu_page.xml" value="0.22" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_my_camera.xml" value="0.10833333333333334" />
@@ -26,6 +26,7 @@
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_car.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_plane.xml" value="0.5" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_train.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_walk.xml" value="0.16304347826086957" />
       </map>
     </option>
   </component>

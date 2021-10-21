@@ -72,7 +72,7 @@
                         android:layout_width="77dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
-                        android:text="Travel" />
+                        android:text="@string/travel" />
 
                 </LinearLayout>
 
@@ -242,7 +242,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="Food"
+                    android:text="@string/food"
                     android:textSize="18sp" />
 
                 <!--Text view to display the percentage -->
@@ -275,7 +275,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="Shop"
+                    android:text="@string/shop"
                     android:textSize="18sp" />
 
                 <!--Text view to display the percentage -->
@@ -314,7 +314,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="Actions"
+                    android:text="@string/actions"
                     android:textSize="18sp" />
 
                 <!--Text view to display the percentage -->
