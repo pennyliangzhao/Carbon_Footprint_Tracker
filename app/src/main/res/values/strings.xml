@@ -44,7 +44,6 @@
     <string name="food">Food</string>
     <string name="shop">Shop</string>
     <string name="actions">Actions</string>
-    <string name="textview">TextView</string>
     <string name="train">train</string>
     <string name="supermarket_retailers">Organic, Fair Trade and Sustainable Supermarkets</string>
     <string name="clothing_retailers">Ethical and Recycled Clothing Retailers</string>
@@ -52,6 +51,11 @@
     <string name="cosmetics_retailers">Ingredient-Conscious Personal Care and Beauty Products</string>
     <string name="outdoor_retailers">Natural and Organic Gardening Retailers</string>
     <string name="string_train" />
-
+    <string name="date_travelled">Date Travelled</string>
+    <string name="type_of_vehicle">Type of Vehicle</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="textview">TextView</string>
+    <string name="distance_travelled">Distance Travelled</string>
+    <string name="select_date">Select Date...</string>
 
 </resources>
