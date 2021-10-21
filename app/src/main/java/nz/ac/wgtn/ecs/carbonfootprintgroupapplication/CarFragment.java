@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 
 public class CarFragment extends Fragment {
-    private EditText date;
+    private Button date;
     private DatePickerDialog datePickerDialog;
     private CarFragment carFragment;
 

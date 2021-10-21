@@ -15,14 +15,14 @@
         android:text="Date  Travelled"
         android:textSize="20sp" />
 
-    <EditText
+    <Button
         android:id="@+id/date"
         android:layout_width="183dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="150dp"
-        android:background="#d4d4d4"
+        android:backgroundTint="@color/white"
         android:hint="Select Date..."
         android:padding="15dp"
         android:textColor="#897"
@@ -38,17 +38,17 @@
         android:text="Distance  Travelled"
         android:textSize="20sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/distanceInput"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="240dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Distance in Kms" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="240dp"
-            android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView19"
@@ -68,9 +68,5 @@
         android:text="Fuel Type"
         android:textSize="20sp" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </FrameLayout>

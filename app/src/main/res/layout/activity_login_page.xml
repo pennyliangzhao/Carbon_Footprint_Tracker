@@ -54,24 +54,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="316dp"
-        android:layout_height="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="@font/montserrat"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61"
+        app:layout_constraintVertical_bias="0.617"
         android:autofillHints="" />
+
 
     <Button
         android:id="@+id/buttonLogin"
@@ -79,13 +77,13 @@
         android:layout_height="50dp"
         android:backgroundTint="@color/cf_orange"
         android:fontFamily="@font/montserrat"
+        android:onClick="loginButtonClick"
         android:text="@string/login"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#0D47A1"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:onClick="loginButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
@@ -148,5 +146,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.949" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
