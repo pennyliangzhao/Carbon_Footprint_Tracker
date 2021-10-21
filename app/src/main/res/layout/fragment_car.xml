@@ -6,37 +6,71 @@
     android:background="@color/cf_green"
     tools:context=".CarFragment">
 
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="160dp"
+        android:text="Date  Travelled"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp"
+        android:background="#d4d4d4"
+        android:hint="Select Date..."
+        android:padding="15dp"
+        android:textColor="#897"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#004D40"
-        android:text="@string/date_and_time"
-        android:textSize="20sp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"/>
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textview"
-        android:textColor="#263238" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="240dp"
+        android:text="Distance  Travelled"
+        android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="80dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="100dp"
-        android:onClick="calendarPicker">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
-            android:hint="hint"
-             />
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="240dp"
+            android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="380dp"
+        android:text="Type of Vehicle"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="450dp"
+        android:text="Fuel Type"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </FrameLayout>
