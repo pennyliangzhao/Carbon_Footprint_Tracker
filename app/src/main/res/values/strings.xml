@@ -37,7 +37,6 @@
     <string name="setting_name">sample@sample.com</string>
     <string name="setting_password">**********</string>
     <string name="action_set_in">create your account</string>
-
     <string name="contribution">Thank you for your contribution.</string>
     <string name="log_out_application">Go back to Application</string>
     <string name="logoutimage">logoutimage</string>
@@ -47,5 +46,12 @@
     <string name="actions">Actions</string>
     <string name="textview">TextView</string>
     <string name="train">train</string>
+    <string name="supermarket_retailers">Organic, Fair Trade and Sustainable Supermarkets</string>
+    <string name="clothing_retailers">Ethical and Recycled Clothing Retailers</string>
+    <string name="homeware_retailers">Eco-Friendly Electronic Goods and Homewares</string>
+    <string name="cosmetics_retailers">Ingredient-Conscious Personal Care and Beauty Products</string>
+    <string name="outdoor_retailers">Natural and Organic Gardening Retailers</string>
     <string name="string_train" />
+
+
 </resources>
