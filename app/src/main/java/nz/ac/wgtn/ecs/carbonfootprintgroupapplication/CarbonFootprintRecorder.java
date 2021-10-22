@@ -1,13 +1,11 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class CarbonFootprintRecorder extends AppCompatActivity {
+public class CarbonFootprintRecorder extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

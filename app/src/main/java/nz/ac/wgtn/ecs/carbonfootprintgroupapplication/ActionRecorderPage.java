@@ -1,10 +1,8 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class ActionRecorderPage extends AppCompatActivity {
+public class ActionRecorderPage extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

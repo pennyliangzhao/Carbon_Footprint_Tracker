@@ -15,7 +15,6 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.Locale;
 
@@ -87,7 +86,7 @@ public class BaseActivity extends AppCompatActivity {
         startActivity(getIntent());
     }
 
-    //Saving language preference to the SharedPreferences
+    //Save language preference to the SharedPreferences
     private void saveLanguagePreference(String language) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
