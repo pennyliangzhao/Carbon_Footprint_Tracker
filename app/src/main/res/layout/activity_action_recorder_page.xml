@@ -167,6 +167,7 @@
         android:id="@+id/conserveEnergyIcon"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="conserve_energy_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
@@ -179,6 +180,7 @@
         android:id="@+id/recycleIcon"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="recycle_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
@@ -191,6 +193,7 @@
         android:id="@+id/bikeIcon"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="bike_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
@@ -200,9 +203,10 @@
         app:srcCompat="@drawable/bike_icon" />
 
     <ImageView
-        android:id="@+id/plasticIcon"
+        android:id="@+id/lessDisposablePlasticIcon"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="less_disposable_plastic_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
@@ -215,6 +219,7 @@
         android:id="@+id/plantTreeIcon"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="plant_tree_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
