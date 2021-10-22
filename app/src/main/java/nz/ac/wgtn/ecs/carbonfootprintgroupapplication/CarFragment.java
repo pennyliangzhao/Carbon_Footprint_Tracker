@@ -60,8 +60,8 @@ public class CarFragment extends Fragment {
 
     }
 
-    public void updateDateTime(int hourOfDay, int minute) {
-        date.setText(Integer.toString(hourOfDay));
+    public void updateDateTime(int year, int month, int day) {
+        date.setText(Integer.toString(day) + Integer.toString(month) +Integer.toString(year) );
     }
 
 

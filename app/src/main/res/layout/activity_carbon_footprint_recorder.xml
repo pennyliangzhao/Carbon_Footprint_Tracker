@@ -76,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.294" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -88,7 +88,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616">
+        app:layout_constraintVertical_bias="0.722">
 
 
         <RadioButton
@@ -111,7 +111,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="25dp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -133,7 +133,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="25dp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
@@ -155,7 +155,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="25dp" />
 
         <RadioButton
             android:id="@+id/radioButton4"
@@ -176,27 +176,7 @@
             app:layout_constraintVertical_bias="0.724" />
 
 
-
-
     </RadioGroup>
-
-    <Button
-        android:id="@+id/record_emission_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/cf_orange"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/record_emission"
-        android:textAllCaps="false"
-        android:textColor="#0D47A1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
