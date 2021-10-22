@@ -1,113 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cf_green"
-    tools:context=".RegisterPage">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".RegisterPage"
+    android:background="@color/cf_green">
 
+    <TextView
+        android:text="@string/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center" />
 
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="700dp"
-        android:layout_marginStart="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editName"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="enter_name"
+        android:gravity="center_vertical|center" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="80dp" />
+    <TextView
+        android:text="password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView2"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
+        android:layout_below="@+id/editName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/earth" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignEnd="@+id/button4"
+        android:layout_alignRight="@+id/button4"
+        android:layout_alignBottom="@+id/button"
+        android:onClick="viewdata"
+        android:backgroundTint="@color/cf_orange"
+        android:text="view_data"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPass"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="23dp"
+        android:backgroundTint="@color/cf_orange"
+        android:onClick="addUser"
+        android:text="add_user"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:textAlignment="center"
-            android:textColor="#0D47A1"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/montserrat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/action_set_in" />
+    <Button
+        android:text="update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="update"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignStart="@+id/button4"
+        android:backgroundTint="@color/cf_orange"
+        android:layout_marginTop="13dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:freezesText="false"
+        android:hint="enter_name_to_delete_data"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_toStartOf="@+id/button2" />
 
-        <EditText
-            android:id="@+id/emailset"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp" />
+    <Button
+        android:text="delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
+        android:id="@+id/button4"
+        android:onClick="delete"
+        android:textStyle="normal|bold"
+        tools:ignore="RelativeOverlap"
+        android:layout_marginBottom="41dp"
+        android:backgroundTint="@color/cf_orange"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-        <EditText
-            android:id="@+id/passwordset"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:minHeight="48dp" />
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="current_name"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
 
-        <EditText
-            android:id="@+id/passwordcheck"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:minHeight="48dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginTop="11dp"
+        android:id="@+id/editPass"
+        android:hint="enter_password"
+        android:gravity="center_vertical|center"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAllCaps="false"
+        android:textStyle="normal|bold" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:textColor="@color/blue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:text="By creating an account you agree with our terms and conditions" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/cf_orange"
-            android:fontFamily="@font/montserrat"
- />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:minHeight="48dp"
-            android:onClick="loginBTN"
-            android:text="@string/login_lead"
-            android:textAlignment="center"
-            android:textColor="@color/blue" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:textStyle="bold|italic"
+        android:textSize="14sp"
+        android:hint="new_name"
+        android:layout_alignTop="@+id/button3"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_marginTop="32dp" />
+</RelativeLayout>

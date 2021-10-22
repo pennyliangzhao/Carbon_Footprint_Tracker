@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarbonFootprint">
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.BaseActivity"
+            android:name=".BaseActivity"
             android:exported="false" />
 
         <provider
@@ -28,58 +28,58 @@
             android:exported="true" />
 
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.SettingsActivity"
+            android:name=".SettingsActivity"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.WebViewActivity"
+            android:name=".WebViewActivity"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ProfilePage"
+            android:name=".ProfilePage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.MyCameraActivity"
+            android:name=".MyCameraActivity"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ActionRecorderPage"
+            android:name=".ActionRecorderPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ShopRecordPage"
+            android:name=".ShopRecordPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ShopActivity"
+            android:name=".ShopActivity"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.FoodRecordPage"
+            android:name=".FoodRecordPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.LogoutPage"
+            android:name=".LogoutPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.SharePage"
+            android:name=".SharePage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.RemindersAlertPage"
+            android:name=".RemindersAlertPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.CarbonFootprintRecorder"
+            android:name=".CarbonFootprintRecorder"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.TravelRecorderPage"
+            android:name=".TravelRecorderPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.MenuPage"
+            android:name=".MenuPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.PointsPage"
+            android:name=".PointsPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.RegisterPage"
+            android:name=".RegisterPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.LoginPage"
+            android:name=".LoginPage"
             android:exported="false" />
         <activity
-            android:name="nz.ac.wgtn.ecs.CarbonFootprint.SplashPage"
+            android:name=".SplashPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

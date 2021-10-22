@@ -32,4 +32,9 @@ public class LoginPage extends BaseActivity {
         }
 
     }
+
+    public void signUpButtonClick(View view){
+        Intent intent = new Intent(this, RegisterPage.class);
+        startActivity(intent);
+    }
 }
