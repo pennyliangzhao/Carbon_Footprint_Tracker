@@ -1,11 +1,10 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
 
- class RegisterPage extends BaseActivity {
+class RegisterPage extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

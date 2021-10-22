@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CarbonFootprintGroupApplication</string>
+    <string name="app_name">Carbon Footprint Tracker</string>
     <string name="carbon_footprint_tracker">Carbon Footprint Tracker</string>
     <string name="get_started">Get Started</string>
     <string name="earth_main">earth_main</string>

@@ -1,4 +1,4 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;

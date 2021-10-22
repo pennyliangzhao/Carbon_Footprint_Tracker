@@ -1,6 +1,4 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
-
-import androidx.appcompat.app.AppCompatActivity;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.content.Intent;
 import android.os.Bundle;

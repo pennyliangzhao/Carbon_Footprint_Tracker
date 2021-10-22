@@ -1,4 +1,4 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -13,29 +13,29 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class PlaneFragment extends Fragment {
+
+public class CarFragment extends Fragment {
     private Button date;
     private DatePickerDialog datePickerDialog;
-    private PlaneFragment planeFragment;
-
+    private CarFragment carFragment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_plane, container, false);
+        View view = inflater.inflate(R.layout.fragment_car, container, false);
         date = view.findViewById(R.id.date);
-        planeFragment = this;
+        carFragment = this;
 
         String [] values =
-                {"Domestic", "International"};
+                {"Diesel","Petrol","Hybrid","Full EV",};
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
 
         String [] values2 =
-                {"Economy","Business","First Class",};
+                {"Small","Compact SUV","Large SUV","Van",};
         Spinner spinner2 = (Spinner) view.findViewById(R.id.spinner2);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values2);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
@@ -45,7 +45,7 @@ public class PlaneFragment extends Fragment {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment newFragment = new DatePickerFragment(planeFragment);
+                DialogFragment newFragment = new DatePickerFragment(carFragment);
                 newFragment.show(getActivity().getSupportFragmentManager(), "ti" +
                         "mePicker");
             }
@@ -60,3 +60,4 @@ public class PlaneFragment extends Fragment {
 
 
 }
+

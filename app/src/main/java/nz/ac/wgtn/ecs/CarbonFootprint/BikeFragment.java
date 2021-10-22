@@ -1,4 +1,4 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;

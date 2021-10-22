@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="nz.ac.wgtn.ecs.carbonfootprintgroupapplication">
+    package="nz.ac.wgtn.ecs.CarbonFootprint">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -17,9 +17,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CarbonFootprintGroupApplication">
+        android:theme="@style/Theme.CarbonFootprint">
         <activity
-            android:name=".BaseActivity"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.BaseActivity"
             android:exported="false" />
 
         <provider
@@ -28,58 +28,58 @@
             android:exported="true" />
 
         <activity
-            android:name=".SettingsActivity"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".WebViewActivity"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.WebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilePage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ProfilePage"
             android:exported="false" />
         <activity
-            android:name=".MyCameraActivity"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.MyCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".ActionRecorderPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ActionRecorderPage"
             android:exported="false" />
         <activity
-            android:name=".ShopRecordPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ShopRecordPage"
             android:exported="false" />
         <activity
-            android:name=".ShopActivity"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.ShopActivity"
             android:exported="false" />
         <activity
-            android:name=".FoodRecordPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.FoodRecordPage"
             android:exported="false" />
         <activity
-            android:name=".LogoutPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.LogoutPage"
             android:exported="false" />
         <activity
-            android:name=".SharePage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.SharePage"
             android:exported="false" />
         <activity
-            android:name=".RemindersAlertPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.RemindersAlertPage"
             android:exported="false" />
         <activity
-            android:name=".CarbonFootprintRecorder"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.CarbonFootprintRecorder"
             android:exported="false" />
         <activity
-            android:name=".TravelRecorderPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.TravelRecorderPage"
             android:exported="false" />
         <activity
-            android:name=".MenuPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.MenuPage"
             android:exported="false" />
         <activity
-            android:name=".PointsPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.PointsPage"
             android:exported="false" />
         <activity
-            android:name=".RegisterPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.RegisterPage"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.LoginPage"
             android:exported="false" />
         <activity
-            android:name=".SplashPage"
+            android:name="nz.ac.wgtn.ecs.CarbonFootprint.SplashPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,4 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
-
-import androidx.appcompat.app.AppCompatActivity;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +8,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.View;
 
 import java.util.Locale;

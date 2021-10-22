@@ -1,19 +1,12 @@
-package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
+package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 
-import android.text.format.DateFormat;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.TimePicker;
 
 import java.util.Calendar;
 
@@ -31,8 +24,8 @@ public class DatePickerFragment extends DialogFragment
     public DatePickerFragment(BikeFragment bikeFragment) {
         this.bikeFragment = bikeFragment;
     }
-    public DatePickerFragment(TrainFragment Fragment) { this.trainFragment = trainFragment; }
-    public DatePickerFragment(PlaneFragment Fragment) { this.planeFragment = planeFragment; }
+    public DatePickerFragment(TrainFragment trainFragment) { this.trainFragment = trainFragment; }
+    public DatePickerFragment(PlaneFragment planeFragment) { this.planeFragment = planeFragment; }
 
 
 
@@ -49,13 +42,10 @@ public class DatePickerFragment extends DialogFragment
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
 
-
-
-
     public void onDateSet(DatePicker view, int year, int month, int day) {
         carFragment.updateDateTime(year, month + 1, day);
-        bikeFragment.updateDateTime(year, month+1, day);
-        trainFragment.updateDateTime(year, month+1, day);
-        planeFragment.updateDateTime(year, month+1, day);
+        //       bikeFragment.updateDateTime(year, month+1, day);
+//        trainFragment.updateDateTime(year, month+1, day);
+//        planeFragment.updateDateTime(year, month+1, day);
     }
 }
