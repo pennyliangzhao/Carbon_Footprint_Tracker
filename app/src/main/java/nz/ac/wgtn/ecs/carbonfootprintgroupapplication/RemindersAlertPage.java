@@ -32,7 +32,7 @@ public class RemindersAlertPage extends AppCompatActivity {
     }
 
     public void plantATreeOnClick(View view) {
-        openActivity(this, WebViewActivity.class, "https://onetreeplanted.org/blogs/stories/planting-trees-reduce-carbon-footprint");
+        openActivity(this, WebViewActivity.class, "https://psci.princeton.edu/tips/2020/8/15/tree-planting-and-negative-emissions");
     }
 
     private void openActivity(Activity activity, Class cls, String url) {

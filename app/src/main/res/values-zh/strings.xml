@@ -67,6 +67,10 @@
     <string name="fuel_type">汽油型号</string>
     <string name="distance_travelled">行程距离</string>
     <string name="select_date">选择日期...</string>
+    <string name="change_language">选择中文</string>
+    <string name="shop_wisely">环保消费</string>
+    <string name="save_points">保存</string>
+    <string name="language">Language</string>
     <string name="facebook_app_id">3126826070919344</string>
     <string name="facebook_client_token">1b4cccb2df42b91d59867bf75f651328</string>
 </resources>

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginPage extends AppCompatActivity {
+public class LoginPage extends BaseActivity {
 
     private EditText emailAddress;
     private EditText password;
