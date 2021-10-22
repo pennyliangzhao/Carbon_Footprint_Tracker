@@ -5,28 +5,23 @@ import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.DatePicker;
 
 import java.util.Calendar;
 
-public class DatePickerFragment extends DialogFragment
+public class DatePickerBikeFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
 
-    private CarFragment carFragment;
     private BikeFragment bikeFragment;
-    private TrainFragment trainFragment;
-    private PlaneFragment planeFragment;
 
-    public DatePickerFragment(CarFragment carFragment) {
-        this.carFragment = carFragment;
-    }
-    public DatePickerFragment(BikeFragment bikeFragment) {
+    public DatePickerBikeFragment(BikeFragment bikeFragment) {
         this.bikeFragment = bikeFragment;
     }
-    public DatePickerFragment(TrainFragment trainFragment) { this.trainFragment = trainFragment; }
-    public DatePickerFragment(PlaneFragment planeFragment) { this.planeFragment = planeFragment; }
-
 
 
     @Override
@@ -43,9 +38,7 @@ public class DatePickerFragment extends DialogFragment
     }
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
-        carFragment.updateDateTime(year, month + 1, day);
-        //       bikeFragment.updateDateTime(year, month+1, day);
-//        trainFragment.updateDateTime(year, month+1, day);
-//        planeFragment.updateDateTime(year, month+1, day);
+        bikeFragment.updateDateTime(year, month + 1, day);
+
     }
 }

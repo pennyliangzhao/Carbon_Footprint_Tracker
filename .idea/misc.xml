@@ -23,9 +23,11 @@
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_splash_page.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_travel_recorder_page.xml" value="0.4114583333333333" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_bike.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_car.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_plane.xml" value="0.5" />
-        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_train.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_car.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_date_picker_train.xml" value="0.1" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_plane.xml" value="0.1" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_time_picker.xml" value="0.1" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_train.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_walk.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/action_menu.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/popup_menu.xml" value="0.14666666666666667" />
@@ -58,7 +60,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

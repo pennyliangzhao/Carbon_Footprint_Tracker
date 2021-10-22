@@ -45,7 +45,7 @@ public class PlaneFragment extends Fragment {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment newFragment = new DatePickerFragment(planeFragment);
+                DialogFragment newFragment = new DatePickerPlaneFragment(planeFragment);
                 newFragment.show(getActivity().getSupportFragmentManager(), "ti" +
                         "mePicker");
             }
@@ -60,3 +60,4 @@ public class PlaneFragment extends Fragment {
 
 
 }
+

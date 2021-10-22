@@ -28,7 +28,7 @@ public class TrainFragment extends Fragment {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment newFragment = new DatePickerFragment(trainFragment);
+                DialogFragment newFragment = new DatePickerTrainFragment(trainFragment);
                 newFragment.show(getActivity().getSupportFragmentManager(), "ti" +
                         "mePicker");
             }

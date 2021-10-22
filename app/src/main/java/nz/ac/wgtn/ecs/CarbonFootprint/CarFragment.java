@@ -45,7 +45,7 @@ public class CarFragment extends Fragment {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment newFragment = new DatePickerFragment(carFragment);
+                DialogFragment newFragment = new DatePickerCarFragment(carFragment);
                 newFragment.show(getActivity().getSupportFragmentManager(), "ti" +
                         "mePicker");
             }
@@ -60,4 +60,3 @@ public class CarFragment extends Fragment {
 
 
 }
-
