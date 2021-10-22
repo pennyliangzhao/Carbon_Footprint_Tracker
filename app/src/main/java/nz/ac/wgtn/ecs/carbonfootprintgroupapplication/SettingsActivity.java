@@ -1,6 +1,5 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -11,7 +10,7 @@ import android.view.View;
 
 import java.util.Locale;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

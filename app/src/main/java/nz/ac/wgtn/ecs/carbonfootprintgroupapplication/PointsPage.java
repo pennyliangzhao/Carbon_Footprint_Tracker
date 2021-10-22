@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
-public class PointsPage extends AppCompatActivity {
+public class PointsPage extends BaseActivity {
 
     private Button click;
     private PieChart chart;

@@ -15,10 +15,10 @@
     <string name="userName">用户名</string>
     <string name="profile">用户资料</string>
     <string name="record_footprint">碳足迹记录</string>
-    <string name="check_points">参看你的分数</string>
+    <string name="check_points">参看您的分数</string>
     <string name="share_on_social_media">分享给更多的人</string>
     <string name="log_out">退出登录</string>
-    <string name="reminders_alert">提示</string>
+    <string name="reminders_alert">温馨提示/建议</string>
     <string name="avatar">头像</string>
     <string name="points_recorder">分数记录</string>
     <string name="record_emission">生活碳排放记录</string>

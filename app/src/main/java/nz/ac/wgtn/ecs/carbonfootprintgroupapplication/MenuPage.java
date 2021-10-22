@@ -44,5 +44,4 @@ public class MenuPage extends BaseActivity {
         Intent intent = new Intent(this, LogoutPage.class);
         startActivity(intent);
     }
-
 }

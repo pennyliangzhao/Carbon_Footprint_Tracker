@@ -1,6 +1,5 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,7 +11,7 @@ import android.widget.Toast;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 
-public class SharePage extends AppCompatActivity {
+public class SharePage extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

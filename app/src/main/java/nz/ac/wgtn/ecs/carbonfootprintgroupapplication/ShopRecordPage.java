@@ -1,10 +1,9 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ShopRecordPage extends AppCompatActivity {
+public class ShopRecordPage extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

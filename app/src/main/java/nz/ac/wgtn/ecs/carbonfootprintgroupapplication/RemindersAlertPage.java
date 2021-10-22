@@ -1,13 +1,12 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class RemindersAlertPage extends AppCompatActivity {
+public class RemindersAlertPage extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,12 +1,11 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 
- class RegisterPage extends AppCompatActivity {
+ class RegisterPage extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
