@@ -61,5 +61,10 @@
     <string name="light_meat">Light Meat</string>
     <string name="vegetarian">Vegetarian</string>
     <string name="vegan">Vegan</string>
+    <string name="conserve_energy">Conserve Energy</string>
+    <string name="recycle">Recycle</string>
+    <string name="bike_more">Bike More</string>
+    <string name="disposable_packaging">Less Disposable Packaging</string>
+    <string name="plant_tree">Plant a Tree</string>
 
 </resources>
