@@ -1,8 +1,6 @@
 package nz.ac.wgtn.ecs.carbonfootprintgroupapplication;
 
 import android.app.DatePickerDialog;
-import android.icu.text.DateFormat;
-import android.icu.util.Calendar;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
@@ -13,11 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class CarFragment extends Fragment {
@@ -51,7 +45,7 @@ public class CarFragment extends Fragment {
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment newFragment = new TimePickerFragment(carFragment);
+                DialogFragment newFragment = new DatePickerFragment(carFragment);
                 newFragment.show(getActivity().getSupportFragmentManager(), "ti" +
                         "mePicker");
             }

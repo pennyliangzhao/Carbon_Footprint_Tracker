@@ -17,14 +17,24 @@ import android.widget.TimePicker;
 
 import java.util.Calendar;
 
-public class TimePickerFragment extends DialogFragment
+public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
 
     private CarFragment carFragment;
+    private BikeFragment bikeFragment;
+    private TrainFragment trainFragment;
+    private PlaneFragment planeFragment;
 
-    public TimePickerFragment(CarFragment carFragment) {
+    public DatePickerFragment(CarFragment carFragment) {
         this.carFragment = carFragment;
     }
+    public DatePickerFragment(BikeFragment bikeFragment) {
+        this.bikeFragment = bikeFragment;
+    }
+    public DatePickerFragment(TrainFragment Fragment) { this.trainFragment = trainFragment; }
+    public DatePickerFragment(PlaneFragment Fragment) { this.planeFragment = planeFragment; }
+
+
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -44,5 +54,8 @@ public class TimePickerFragment extends DialogFragment
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         carFragment.updateDateTime(year, month + 1, day);
+        bikeFragment.updateDateTime(year, month+1, day);
+        trainFragment.updateDateTime(year, month+1, day);
+        planeFragment.updateDateTime(year, month+1, day);
     }
 }

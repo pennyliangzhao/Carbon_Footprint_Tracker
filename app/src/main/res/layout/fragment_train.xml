@@ -3,12 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cf_green"
     tools:context=".TrainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="train" />
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/date_travelled"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:hint="@string/select_date"
+        android:padding="15dp"
+        android:textColor="#897"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/distance_travelled"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/distanceInput"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text=""
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"
+        android:text="@string/fuel_type"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/type_of_vehicle"
+        android:textColor="#263238"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="250dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="181dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="320dp" />
 
 </FrameLayout>
