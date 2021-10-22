@@ -88,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.307"
-        app:srcCompat="@drawable/grocery_cart_logo" />
+        app:srcCompat="@drawable/grocery_cart_icon" />
 
     <RadioButton
         android:id="@+id/radioButton"
@@ -117,7 +117,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.444"
-        app:srcCompat="@drawable/clothing_logo" />
+        app:srcCompat="@drawable/clothing_icon" />
 
     <RadioButton
         android:id="@+id/radioButton5"
@@ -146,7 +146,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.791"
-        app:srcCompat="@drawable/homeware_goods_logo" />
+        app:srcCompat="@drawable/homeware_goods_icon" />
 
     <RadioButton
         android:id="@+id/radioButton6"
@@ -175,7 +175,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.597"
-        app:srcCompat="@drawable/cosmetics_logo" />
+        app:srcCompat="@drawable/cosmetics_icon" />
 
     <RadioButton
         android:id="@+id/radioButton7"
@@ -221,6 +221,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.935"
-        app:srcCompat="@drawable/gardening_logo" />
+        app:srcCompat="@drawable/gardening_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

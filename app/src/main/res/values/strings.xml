@@ -39,7 +39,7 @@
     <string name="action_set_in">create your account</string>
     <string name="contribution">Thank you for your contribution.</string>
     <string name="log_out_application">Go back to Application</string>
-    <string name="logoutimage">logoutimage</string>
+    <string name="log_out_image">log out image</string>
     <string name="travel">Travel</string>
     <string name="food">Food</string>
     <string name="shop">Shop</string>

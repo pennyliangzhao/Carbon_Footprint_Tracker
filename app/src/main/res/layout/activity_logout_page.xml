@@ -8,7 +8,7 @@
     tools:context=".LogoutPage">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/contributionMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
@@ -26,10 +26,10 @@
         app:layout_constraintVertical_bias="0.121" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logOutIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/logoutimage"
+        android:contentDescription="log_out_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.869" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
