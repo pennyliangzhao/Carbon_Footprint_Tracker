@@ -16,16 +16,28 @@ public class RemindersAlertPage extends AppCompatActivity {
     }
 
     public void bannerOnClick(View view) {
-        openActivity(this, WebViewActivity.class, "https://www.rnz.co.nz");
+        openActivity(this, WebViewActivity.class, "https://www.nytimes.com/guides/year-of-living-better/how-to-reduce-your-carbon-footprint");
     }
 
     public void shopWiselyOnClick(View view) {
-        openActivity(this, WebViewActivity.class, "https://www.google.com");
+        openActivity(this, WebViewActivity.class, "https://greenerideal.com/guides/0327-10-eco-friendly-shopping-tips/");
+    }
+
+    public void bikeMoreOnClick(View view) {
+        openActivity(this, WebViewActivity.class, "https://www.sustrans.org.uk/our-blog/get-active/2020/in-your-community/how-does-walking-and-cycling-help-to-protect-the-environment/");
+    }
+
+    public void conserveEnergyOnClick(View view) {
+        openActivity(this, WebViewActivity.class, "https://19january2017snapshot.epa.gov/climatechange/what-you-can-do-home_.html");
+    }
+
+    public void plantATreeOnClick(View view) {
+        openActivity(this, WebViewActivity.class, "https://onetreeplanted.org/blogs/stories/planting-trees-reduce-carbon-footprint");
     }
 
     private void openActivity(Activity activity, Class cls, String url) {
         Intent intent = new Intent(activity, cls);
-        intent.putExtra("URL",url);
+        intent.putExtra("URL", url);
         startActivity(intent);
     }
 }

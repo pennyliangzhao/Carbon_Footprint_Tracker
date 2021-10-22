@@ -11,7 +11,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 
 import java.util.Locale;
-
+@SuppressWarnings("deprecation")
 public class SplashPage extends AppCompatActivity {
     private Context context;
 
@@ -25,6 +25,7 @@ public class SplashPage extends AppCompatActivity {
         Intent intent = new Intent(this, LoginPage.class);
         startActivity(intent);
     }
+
 
     public void changeLanguage(View view) {
         Locale myLocale = new Locale("zh");
