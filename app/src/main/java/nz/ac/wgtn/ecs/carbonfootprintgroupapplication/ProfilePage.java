@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ProfilePage extends AppCompatActivity {
+public class ProfilePage extends BaseActivity {
     private ImageView avatar;
 
     @Override

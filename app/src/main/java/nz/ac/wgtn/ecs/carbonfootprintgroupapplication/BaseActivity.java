@@ -6,9 +6,11 @@ import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -80,8 +82,16 @@ public class BaseActivity extends AppCompatActivity {
         Configuration conf = res.getConfiguration();
         conf.setLocale(myLocale);
         res.updateConfiguration(conf, dm);
-
+        saveLanguagePreference(language);
         finish();
         startActivity(getIntent());
+    }
+
+    //Saving language preference to the SharedPreferences
+    private void saveLanguagePreference(String language) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("language", language);
+        editor.apply();
     }
 }
