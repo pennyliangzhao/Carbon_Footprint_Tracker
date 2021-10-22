@@ -97,6 +97,7 @@
             <ImageButton
                 android:id="@+id/carButton"
                 android:layout_width="60dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_height="70dp"
                 android:layout_marginLeft="30dp"
                 android:onClick="carButton"
@@ -110,6 +111,7 @@
             <ImageButton
                 android:id="@+id/bikeButton"
                 android:onClick="bikeButton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="60dp"
                 android:layout_height="70dp"
                 app:srcCompat="@drawable/bike_1" />
@@ -122,6 +124,7 @@
             <ImageButton
                 android:id="@+id/planeButton"
                 android:onClick="planeButton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="60dp"
                 android:layout_height="70dp"
                 app:srcCompat="@drawable/plane_1" />
@@ -134,6 +137,7 @@
             <ImageButton
                 android:id="@+id/trainButton"
                 android:onClick="trainButton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="60dp"
                 android:layout_height="70dp"
                 app:srcCompat="@drawable/train_1" />
@@ -146,6 +150,7 @@
             <ImageButton
                 android:id="@+id/walkButton"
                 android:onClick="walkButton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="60dp"
                 android:layout_height="70dp"
                 app:srcCompat="@drawable/walk_1" />
