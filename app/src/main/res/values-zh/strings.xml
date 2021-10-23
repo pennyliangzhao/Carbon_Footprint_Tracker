@@ -52,7 +52,7 @@
     <string name="vegetarian">素食</string>
     <string name="vegan">纯素</string>
     <string name="recycle">循环再利用</string>
-    <string name="plant_a_tree">植树</string>
+    <string name="plant_a_tree">植树造林</string>
     <string name="bike_more">绿色出行</string>
     <string name="conserve_energy">节约能源</string>
 <!--    <string name="test_language">你好</string>-->
@@ -70,11 +70,11 @@
     <string name="change_language">选择中文</string>
     <string name="shop_wisely">环保消费</string>
     <string name="save_points">保存</string>
-    <string name="language">Language</string>
+    <string name="language">语言</string>
     <string name="facebook_app_id">3126826070919344</string>
     <string name="facebook_client_token">1b4cccb2df42b91d59867bf75f651328</string>
-    <string name="enter_password">enter_password</string>
-    <string name="settings">Settings</string>
-    <string name="total_food_points">Total Food Points</string>
-    <string name="total_action_points">Total Action Points</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="settings">设置</string>
+    <string name="total_food_points">食物分数汇总</string>
+    <string name="total_action_points">行动分数汇总</string>
 </resources>
