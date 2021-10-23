@@ -76,11 +76,10 @@ public class RegisterPage extends AppCompatActivity {
             int a = helper.delete(uname);
             if (a <= 0) {
                 Message.message(getApplicationContext(), "Unsuccessful");
-                delete.setText("");
             } else {
                 Message.message(this, "DELETED");
-                delete.setText("");
             }
+            delete.setText("");
         }
     }
 }
