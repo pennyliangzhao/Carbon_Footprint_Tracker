@@ -77,4 +77,5 @@
     <string name="settings">设置</string>
     <string name="total_food_points">食物分数汇总</string>
     <string name="total_action_points">行动分数汇总</string>
+    <string name="total_shop_points">Total Shop Points</string>
 </resources>
