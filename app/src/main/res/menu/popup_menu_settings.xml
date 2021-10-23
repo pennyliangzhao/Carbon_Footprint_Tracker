@@ -4,15 +4,15 @@
     <item
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/action_language"
-        android:title="@string/language"
-        android:icon="@drawable/language_white_foreground"
+        android:id="@+id/popup_light"
+        android:title="Light Mode"
+        android:icon="@drawable/dark_sun_foreground"
         app:showAsAction="always"/>
     <item
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/action_settings"
-        android:title="@string/settings"
-        android:icon="@drawable/settings_foreground"
+        android:id="@+id/popup_dark"
+        android:title="Dark mode"
+        android:icon="@drawable/dark_moon_foreground"
         app:showAsAction="always"/>
 </menu>

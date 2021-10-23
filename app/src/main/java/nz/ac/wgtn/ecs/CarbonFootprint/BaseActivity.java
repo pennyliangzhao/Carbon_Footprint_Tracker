@@ -2,6 +2,7 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 
@@ -69,6 +70,38 @@ public class BaseActivity extends AppCompatActivity {
 
             optionsMenu.show();
 
+        }
+        if(id == R.id.action_settings) {
+            MenuBuilder menuBuilder = new MenuBuilder(this);
+            MenuInflater inflater = new MenuInflater(this);
+            inflater.inflate(R.menu.popup_menu_settings, menuBuilder);
+            MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, findViewById(R.id.action_settings));
+            optionsMenu.setForceShowIcon(true);
+
+            menuBuilder.setCallback(new MenuBuilder.Callback() {
+                @Override
+                public boolean onMenuItemSelected(@NonNull MenuBuilder menu, @NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.popup_light:
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                            return true;
+
+                        case R.id.popup_dark:
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                            return true;
+
+                        default:
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                            return false;
+                    }
+                }
+
+                @Override
+                public void onMenuModeChange(@NonNull MenuBuilder menu) {
+                }
+            });
+
+            optionsMenu.show();
         }
 
         return super.onOptionsItemSelected(item);

@@ -73,4 +73,6 @@
     <string name="language">Language</string>
     <string name="facebook_app_id">3126826070919344</string>
     <string name="facebook_client_token">1b4cccb2df42b91d59867bf75f651328</string>
+    <string name="enter_password">enter_password</string>
+    <string name="settings">Settings</string>
 </resources>
