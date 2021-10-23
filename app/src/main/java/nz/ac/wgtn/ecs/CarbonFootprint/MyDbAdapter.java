@@ -21,7 +21,9 @@ public class MyDbAdapter {
     public MyDbAdapter(Context context) {
         myhelper = new myDbHelper(context);
         //Crete default users
-        defaultUsers.put("lou", new User("rhea", "123", 0));
+        defaultUsers.put("rhea", new User("rhea", "123", 0));
+        defaultUsers.put("yuri", new User("yuri", "456", 0));
+
     }
 
     public void fillDatabaseWithDefaultUsers() {
@@ -91,7 +93,7 @@ public class MyDbAdapter {
 
             try {
                 db.execSQL(CREATE_TABLE);
-                //fillDatabaseWithData(db);
+               //fillDatabaseWithDefaultUsers();
             } catch (Exception e) {
                 Message.message(context, "" + e);
             }

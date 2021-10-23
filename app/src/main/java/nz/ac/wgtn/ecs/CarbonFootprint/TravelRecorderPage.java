@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.TextView;
 
 public class TravelRecorderPage extends AppCompatActivity {
     private Fragment fragmentCar = new CarFragment();
@@ -19,6 +22,11 @@ public class TravelRecorderPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel_recorder_page);
         switchFragment(R.id.frame_layout, fragmentCar);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userName = preferences.getString("current_username","");
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
     }
 
 

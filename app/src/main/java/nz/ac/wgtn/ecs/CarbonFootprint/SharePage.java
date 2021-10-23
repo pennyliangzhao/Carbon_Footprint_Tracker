@@ -2,10 +2,13 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.share.model.SharePhoto;
@@ -17,6 +20,11 @@ public class SharePage extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share_page);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userName = preferences.getString("current_username","");
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
     }
 
     public void share(View view) {
