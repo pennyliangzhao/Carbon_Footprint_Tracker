@@ -10,7 +10,7 @@
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="login">Login</string>
     <string name="earth_logo">earth_logo</string>
-    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_afternoon">Hello</string>
     <string name="userName">TextView</string>
     <string name="profile">Profile</string>
     <string name="record_footprint">Record Footprint</string>
@@ -23,7 +23,7 @@
     <string name="record_emission">Record Emission</string>
     <string name="action">Action</string>
     <string name="reminder">Things You Can Do</string>
-    <string name="share">encourage others to  join the revolution</string>
+    <string name="share">Share &amp; Encourage others to join</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="date_and_time">Date and Time</string>

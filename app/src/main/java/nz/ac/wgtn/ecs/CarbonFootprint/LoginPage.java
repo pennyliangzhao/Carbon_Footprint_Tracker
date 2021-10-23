@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
@@ -34,7 +33,7 @@ public class LoginPage extends BaseActivity {
         password = findViewById(R.id.editTextTextPassword);
         myDbHelper = new MyDbAdapter(this);
 
-        sqLiteDatabaseObj = myDbHelper.myhelper.getWritableDatabase();
+        sqLiteDatabaseObj = myDbHelper.helper.getWritableDatabase();
     }
 
 
@@ -51,10 +50,10 @@ public class LoginPage extends BaseActivity {
 
 
         if (EditTextEmptyHolder) {
-            sqLiteDatabaseObj = myDbHelper.myhelper.getReadableDatabase();
+            sqLiteDatabaseObj = myDbHelper.helper.getReadableDatabase();
             // Adding search email query to cursor.
-            Cursor cursor = sqLiteDatabaseObj.query(myDbHelper.myhelper.TABLE_NAME, null,
-                    " " + myDbHelper.myhelper.NAME + "=?", new String[]{EmailHolder},
+            Cursor cursor = sqLiteDatabaseObj.query(myDbHelper.helper.TABLE_NAME, null,
+                    " " + myDbHelper.helper.NAME + "=?", new String[]{EmailHolder},
                     null, null, null);
             while (cursor.moveToNext()) {
                 int cid =cursor.getInt(cursor.getColumnIndex(MyDbAdapter.myDbHelper.UID));
@@ -64,7 +63,7 @@ public class LoginPage extends BaseActivity {
                 if (emailAddress.getText().toString().equals(name) && password.getText().toString().equals(passwordDb)) {
                     User user = new User(cid, name, 0);
                     saveCurrentUser(user);
-                    TempPassword = cursor.getString(cursor.getColumnIndex(myDbHelper.myhelper.MyPASSWORD));
+                    TempPassword = cursor.getString(cursor.getColumnIndex(myDbHelper.helper.MyPASSWORD));
                 }
             }
 

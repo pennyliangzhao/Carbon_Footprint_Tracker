@@ -9,39 +9,40 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="179dp"
-        android:layout_height="43dp"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/good_afternoon"
         android:textAllCaps="false"
         android:textColor="#004D40"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047" />
 
+
     <TextView
         android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="TextView"
         android:textAllCaps="false"
         android:textColor="#004D40"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
 
     <ImageView
         android:id="@+id/avatar"
