@@ -7,6 +7,106 @@
     android:background="@color/cf_green"
     tools:context=".FoodRecordPage">
 
+    <CheckBox
+        android:id="@+id/food_type_vegan"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/vegan"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <CheckBox
+        android:id="@+id/food_type_vegetarian"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/vegetarian"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <CheckBox
+        android:id="@+id/food_type_light_meat"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/light_meat"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <CheckBox
+        android:id="@+id/food_type_medium_meat"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/medium_meat"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <CheckBox
+        android:id="@+id/food_type_heavy_meat"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/heavy_meat"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
+
     <TextView
         android:id="@+id/goodAfternoonMessage"
         android:layout_width="179dp"
@@ -78,97 +178,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.183" />
 
-    <RadioButton
-        android:id="@+id/vegan"
-        android:layout_width="265dp"
-        android:layout_height="64dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/vegan"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
-
-    <RadioButton
-        android:id="@+id/vegetarian"
-        android:layout_width="263dp"
-        android:layout_height="66dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/vegetarian"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
-
-    <RadioButton
-        android:id="@+id/lightMeatBtn"
-        android:layout_width="265dp"
-        android:layout_height="64dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/light_meat"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
-
-    <RadioButton
-        android:id="@+id/mediumMeatBtn"
-        android:layout_width="269dp"
-        android:layout_height="60dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/medium_meat"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
-
-    <RadioButton
-        android:id="@+id/heavyMeatBtn"
-        android:layout_width="272dp"
-        android:layout_height="59dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/heavy_meat"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
-
     <Button
         android:id="@+id/savePointsBtn"
         android:layout_width="179dp"
         android:layout_height="44dp"
         android:backgroundTint="@color/cf_orange"
         android:fontFamily="@font/montserrat"
+        android:onClick="savePoints"
         android:text="@string/save_points"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -179,20 +195,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.959" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/totalFoodPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textview"
+        android:text="@string/total_food_points"
         android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.873" />
 
     <ImageView
         android:id="@+id/heavyMeatIcon"

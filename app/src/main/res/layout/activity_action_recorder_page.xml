@@ -7,6 +7,106 @@
     android:background="@color/cf_green"
     tools:context=".ActionRecorderPage">
 
+    <CheckBox
+        android:id="@+id/less_disposable_packaging"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/disposable_packaging"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.712" />
+
+    <CheckBox
+        android:id="@+id/plant_tree"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/plant_a_tree"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <CheckBox
+        android:id="@+id/bike_more"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/bike_more"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <CheckBox
+        android:id="@+id/recycle"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/recycle"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.449" />
+
+    <CheckBox
+        android:id="@+id/conserve_energy"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/conserve_energy"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
+
     <TextView
         android:id="@+id/goodAfternoonMessage"
         android:layout_width="179dp"
@@ -78,90 +178,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.183" />
 
-    <RadioButton
-        android:id="@+id/plantTreeBtn"
-        android:layout_width="265dp"
-        android:layout_height="64dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/plant_a_tree"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
-
-    <RadioButton
-        android:id="@+id/lessDisposablePackagingBtn"
-        android:layout_width="263dp"
-        android:layout_height="66dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/disposable_packaging"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
-
-    <RadioButton
-        android:id="@+id/bikeMoreBtn"
-        android:layout_width="265dp"
-        android:layout_height="64dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/bike_more"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
-
-    <RadioButton
-        android:id="@+id/recycleBtn"
-        android:layout_width="269dp"
-        android:layout_height="60dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/recycle"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
-
-    <RadioButton
-        android:id="@+id/conserveEnergyBtn"
-        android:layout_width="272dp"
-        android:layout_height="59dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/conserve_energy"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
 
     <Button
         android:id="@+id/savePointsBtn"
@@ -179,20 +195,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.962" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/totalActionPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textview"
+        android:text="@string/total_action_points"
         android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.891" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -222,12 +238,12 @@
         android:id="@+id/imageView14"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579"
+        app:layout_constraintVertical_bias="0.575"
         app:srcCompat="@drawable/bike_icon" />
 
     <ImageView
@@ -239,7 +255,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679"
+        app:layout_constraintVertical_bias="0.713"
         app:srcCompat="@drawable/plastic_icon" />
 
     <ImageView
@@ -251,7 +267,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="0.836"
         app:srcCompat="@drawable/plant_tree_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
