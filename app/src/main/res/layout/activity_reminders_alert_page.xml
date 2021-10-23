@@ -205,8 +205,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="120dp"
-        android:layout_height="108dp"
+        android:layout_width="124dp"
+        android:layout_height="104dp"
         android:onClick="bikeMoreOnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -218,8 +218,8 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="80dp"
-        android:layout_height="53dp"
+        android:layout_width="95dp"
+        android:layout_height="57dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/bike_more"
