@@ -54,18 +54,28 @@ public class LoginPage extends BaseActivity {
                 Cursor cursor = sqLiteDatabaseObj.query(myDbHelper.myhelper.TABLE_NAME, null,
                         " " + myDbHelper.myhelper.NAME + "=?", new String[]{EmailHolder},
                         null, null, null);
-                while (cursor.moveToNext()) {
-                    if (cursor.isFirst()) {
-                        cursor.moveToFirst();
+                while(cursor.moveToNext()) {
+                    String name =cursor.getString(cursor.getColumnIndex(MyDbAdapter.myDbHelper.NAME));
+                    String  passwordDb =cursor.getString(cursor.getColumnIndex(MyDbAdapter.myDbHelper.MyPASSWORD));
 
-                        //Storing password associated with email
+                    if(emailAddress.getText().toString().equals(name) && password.getText().toString().equals(passwordDb)) {
                         TempPassword = cursor.getString(cursor.getColumnIndex(myDbHelper.myhelper.MyPASSWORD));
-                        //closing cursor
-                        cursor.close();
                     }
                 }
+
+
+//                while (cursor.moveToNext()) {
+//                    if (cursor.isFirst()) {
+//                        cursor.moveToFirst();
+//                        //Storing password associated with email
+//                        TempPassword = cursor.getString(cursor.getColumnIndex(myDbHelper.myhelper.MyPASSWORD));
+//                        //closing cursor
+//                        cursor.close();
+//                    }
+//                }
                 //method to check final result
                 CheckFinalResult();
+                cursor.close();
             }
             else {
 
