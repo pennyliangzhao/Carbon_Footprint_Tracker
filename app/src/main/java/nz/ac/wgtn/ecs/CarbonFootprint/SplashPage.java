@@ -21,6 +21,19 @@ public class SplashPage extends BaseActivity {
         //Change the language
         setDefaultLanguage();
         setContentView(R.layout.activity_splash_page);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean defaultUsers = preferences.getBoolean("default_users_created", false);
+
+        if(!defaultUsers) {
+            MyDbAdapter myDbAdapter = new MyDbAdapter(this);
+            myDbAdapter.fillDatabaseWithDefaultUsers();
+
+            //Update the SharedPreferences
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("default_users_created", true);
+            editor.apply();
+        }
     }
 
     public void getStartedButtonClick(View view){
