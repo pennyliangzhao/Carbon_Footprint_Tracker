@@ -3,8 +3,11 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.TextView;
 
 public class RemindersAlertPage extends BaseActivity {
 
@@ -12,6 +15,11 @@ public class RemindersAlertPage extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminders_alert_page);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userName = preferences.getString("current_username","");
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
     }
 
     public void bannerOnClick(View view) {
