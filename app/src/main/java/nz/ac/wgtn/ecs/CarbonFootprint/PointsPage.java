@@ -1,9 +1,12 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 import org.eazegraph.lib.charts.PieChart;
@@ -22,6 +25,11 @@ public class PointsPage extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points_page);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userName = preferences.getString("current_username","");
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
 
         click = findViewById(R.id.btn_click);
         chart = findViewById(R.id.pie_chart);

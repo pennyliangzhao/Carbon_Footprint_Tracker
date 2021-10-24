@@ -6,7 +6,7 @@
     <string name="welcome">欢迎您的加入</string>
     <string name="email_address">邮箱</string>
     <string name="forgot_your_password">忘记密码?</string>
-    <string name="password">密码</string>
+<!--    <string name="password">密码</string>-->
     <string name="sign_up">立即注册</string>
     <string name="don_t_have_an_account">还没有账户?</string>
     <string name="login">登录</string>

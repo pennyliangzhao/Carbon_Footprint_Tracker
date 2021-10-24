@@ -76,17 +76,6 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311"
-        app:srcCompat="@drawable/earth" />
-
-    <ImageView
         android:id="@+id/imageView5"
         android:layout_width="68dp"
         android:layout_height="68dp"
@@ -114,8 +103,8 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="112dp"
-        android:layout_height="109dp"
+        android:layout_width="109dp"
+        android:layout_height="105dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.899"
@@ -123,4 +112,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.924"
         app:srcCompat="@drawable/twitter" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="357dp"
+        android:layout_height="399dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33"
+        app:srcCompat="@drawable/share_page" />
 </androidx.constraintlayout.widget.ConstraintLayout>

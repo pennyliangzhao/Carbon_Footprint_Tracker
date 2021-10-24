@@ -38,18 +38,17 @@
         android:gravity="center_vertical|center" />
 
     <TextView
-        android:text="password"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:id="@+id/textView2"
-        android:textStyle="bold|italic"
-        android:textSize="18sp"
         android:layout_below="@+id/editName"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
         android:gravity="center"
-        />
+        android:text="password"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/button2"
@@ -72,9 +71,9 @@
         android:layout_below="@+id/editPass"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="@color/cf_orange"
         android:onClick="addUser"
         android:text="add_user"
@@ -95,34 +94,39 @@
         android:layout_marginTop="13dp" />
 
     <EditText
+        android:id="@+id/editText6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText6"
         android:layout_alignTop="@+id/button4"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="-24dp"
+        android:layout_marginRight="-24dp"
+        android:layout_toStartOf="@+id/button2"
+        android:layout_toLeftOf="@+id/button2"
+        android:ems="10"
         android:freezesText="false"
         android:hint="enter_name_to_delete_data"
-        android:layout_toLeftOf="@+id/button2"
-        android:layout_toStartOf="@+id/button2" />
+        android:inputType="textPersonName" />
 
     <Button
-        android:text="delete"
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="21dp"
-        android:layout_marginEnd="21dp"
-        android:id="@+id/button4"
-        android:onClick="delete"
-        android:textStyle="normal|bold"
-        tools:ignore="RelativeOverlap"
-        android:layout_marginBottom="41dp"
-        android:backgroundTint="@color/cf_orange"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="133dp"
+        android:backgroundTint="@color/cf_orange"
+        android:onClick="delete"
+        android:text="delete"
+        android:textStyle="normal|bold"
+        tools:ignore="RelativeOverlap" />
 
     <EditText
         android:id="@+id/editText3"
@@ -131,9 +135,9 @@
         android:layout_below="@+id/button"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="59dp"
         android:ems="10"
         android:hint="current_name"
         android:inputType="textPersonName"
@@ -141,32 +145,35 @@
         android:textStyle="bold|italic" />
 
     <EditText
+        android:id="@+id/editPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginTop="11dp"
-        android:id="@+id/editPass"
-        android:hint="enter_password"
-        android:gravity="center_vertical|center"
-        android:textSize="18sp"
         android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:gravity="center_vertical|center"
+        android:hint="enter_password"
+        android:inputType="textPassword"
         android:textAllCaps="false"
+        android:textSize="18sp"
         android:textStyle="normal|bold" />
 
     <EditText
+        android:id="@+id/editText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText5"
-        android:textStyle="bold|italic"
-        android:textSize="14sp"
-        android:hint="new_name"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignLeft="@+id/editText3"
         android:layout_alignStart="@+id/editText3"
-        android:layout_marginTop="32dp" />
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignTop="@+id/button3"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="new_name"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
+
 </RelativeLayout>

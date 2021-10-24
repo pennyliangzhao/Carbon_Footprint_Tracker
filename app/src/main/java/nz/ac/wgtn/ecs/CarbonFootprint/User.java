@@ -3,16 +3,16 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 public class User {
     private int userID;
     private String userName;
-    private double points;
+    private int points;
     private String password;
 
-    public User(int userID, String userName, double points) {
+    public User(int userID, String userName, int points) {
         this.userID = userID;
         this.userName = userName;
         this.points = points;
     }
 
-    public User(String userName, String password, double points) {
+    public User(String userName, String password, int points) {
         this.userName = userName;
         this.password = password;
         this.points = points;
@@ -38,7 +38,7 @@ public class User {
         return points;
     }
 
-    public void setPoints(double points) {
+    public void setPoints(int points) {
         this.points = points;
     }
 
