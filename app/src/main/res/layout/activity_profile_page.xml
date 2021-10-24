@@ -26,7 +26,7 @@
         <ImageView
             android:id="@+id/imageViewAvatar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="122dp"
             android:onClick="avatarBTN"
             app:srcCompat="@drawable/girl" />
 
@@ -64,7 +64,7 @@
             android:layout_height="50dp" />
 
         <EditText
-            android:id="@+id/emailset"
+            android:id="@+id/oldusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -72,7 +72,15 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/passwordset"
+            android:id="@+id/newusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/setting_name"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/oldpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -80,7 +88,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/passwordcheck"
+            android:id="@+id/newpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -98,25 +106,33 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="match_parent" />
-
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="match_parent" />
-
             <Button
-                android:id="@+id/update"
-                android:layout_width="wrap_content"
+                android:id="@+id/updateUserName"
+                android:layout_width="276dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText3"
                 android:layout_alignStart="@+id/button4"
                 android:layout_alignLeft="@+id/button4"
                 android:layout_marginTop="13dp"
                 android:backgroundTint="@color/cf_orange"
-                android:text="update"
+                android:onClick="updateUserName"
+                android:text="update username"
                 android:textStyle="normal|bold" />
+
+
+            <Button
+                android:id="@+id/updatePassWord"
+                android:layout_width="118dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/editText3"
+                android:layout_alignLeft="@+id/button4"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/cf_orange"
+                android:onClick="updatePassword"
+                android:text="update password"
+                android:textStyle="normal|bold" />
+
         </LinearLayout>
 
     </LinearLayout>

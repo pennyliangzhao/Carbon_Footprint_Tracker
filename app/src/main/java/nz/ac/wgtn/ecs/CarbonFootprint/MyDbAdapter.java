@@ -76,6 +76,16 @@ public class MyDbAdapter {
         return count;
     }
 
+    public int updatePassword(String oldPass, String newPass) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.MyPASSWORD, newPass);
+        String[] whereArgs = {oldPass};
+        int count = db.update(myDbHelper.TABLE_NAME, contentValues, myDbHelper.MyPASSWORD + " = ?", whereArgs);
+        return count;
+    }
+
+
     public int updatePoints(double initialPoints, double newPoints) {
         SQLiteDatabase db = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

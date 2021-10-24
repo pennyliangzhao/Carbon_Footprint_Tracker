@@ -3,6 +3,7 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -43,6 +44,9 @@ public class RegisterPage extends AppCompatActivity {
                 Pass.setText("");
             }
         }
+
+        Intent i = new Intent(this, MenuPage.class);
+        startActivity(i);
     }
 
     public void viewdata(View view) {
@@ -50,39 +54,5 @@ public class RegisterPage extends AppCompatActivity {
         Message.message(this, data);
     }
 
-    public void update(View view) {
-        String u1 = updateold.getText().toString();
-        String u2 = updatenew.getText().toString();
-        if (u1.isEmpty() || u2.isEmpty()) {
-            Message.message(getApplicationContext(), "Enter Data");
-        } else {
-            int a = helper.updateName(u1, u2);
-            if (a <= 0) {
-                Message.message(getApplicationContext(), "Unsuccessful");
-                updateold.setText("");
-                updatenew.setText("");
-            } else {
-                Message.message(getApplicationContext(), "Updated");
-                updateold.setText("");
-                updatenew.setText("");
-            }
-        }
-
-    }
-
-    public void delete(View view) {
-        String uname = delete.getText().toString();
-        if (uname.isEmpty()) {
-            Message.message(getApplicationContext(), "Enter Data");
-        } else {
-            int a = helper.delete(uname);
-            if (a <= 0) {
-                Message.message(getApplicationContext(), "Unsuccessful");
-            } else {
-                Message.message(this, "DELETED");
-            }
-            delete.setText("");
-        }
-    }
 }
 
