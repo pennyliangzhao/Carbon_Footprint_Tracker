@@ -19,10 +19,10 @@ public class MyDbAdapter {
     public MyDbAdapter(Context context) {
         myhelper = new myDbHelper(context);
         //Crete default users
-        defaultUsers.put("rhea", new User("rhea", "123", 0));
-        defaultUsers.put("yuri", new User("yuri", "456", 0));
-        defaultUsers.put("penny", new User("penny", "789", 0));
-        defaultUsers.put("lou", new User("lou", "910", 0));
+        defaultUsers.put("rhea", new User("rhea", "567", 50));
+        defaultUsers.put("yuri", new User("yuri", "456", 60));
+        defaultUsers.put("penny", new User("penny", "789", 100));
+        defaultUsers.put("lou", new User("lou", "910", 80));
 
     }
 
@@ -74,6 +74,16 @@ public class MyDbAdapter {
         int count = db.update(myDbHelper.TABLE_NAME, contentValues, myDbHelper.NAME + " = ?", whereArgs);
         return count;
     }
+
+    public int updatePoints(double initialPoints, double newPoints) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.MyPoints, newPoints);
+        String[] whereArgs = {String.valueOf(initialPoints)};
+        int count = db.update(myDbHelper.TABLE_NAME, contentValues, myDbHelper.MyPoints + " = ?", whereArgs);
+        return count;
+    }
+
 
     static class myDbHelper extends SQLiteOpenHelper {
         static final String DATABASE_NAME = "myDatabase";    // Database Name

@@ -1,7 +1,10 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
@@ -18,6 +21,9 @@ import android.widget.Toast;
 
 
 public class CarFragment extends Fragment {
+    MyDbAdapter myDbHelper;
+    SQLiteDatabase sqLiteDatabaseObj;
+    double initialPoints, newPoints;
     private Button date;
     private Button calculatePoints;
     private Button savePoints;
@@ -27,7 +33,6 @@ public class CarFragment extends Fragment {
     private Spinner spinner2;
     private TextView distance;
     private TextView textview;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,16 +47,19 @@ public class CarFragment extends Fragment {
 
         carFragment = this;
 
-        String [] values =
-                {"Diesel","Petrol","Hybrid","Full EV",};
+        myDbHelper = new MyDbAdapter(view.getContext());
+
+
+        String[] values =
+                {"Diesel", "Petrol", "Hybrid", "Full EV",};
         spinner = (Spinner) view.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
 
-        String [] values2 =
-                {"Small", "SUV","Van",};
-       spinner2 = (Spinner) view.findViewById(R.id.spinner2);
+        String[] values2 =
+                {"Small", "SUV", "Van",};
+        spinner2 = (Spinner) view.findViewById(R.id.spinner2);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values2);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner2.setAdapter(adapter2);
@@ -74,7 +82,7 @@ public class CarFragment extends Fragment {
             }
         });
 
-        savePoints.setOnClickListener((new View.OnClickListener(){
+        savePoints.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String pointsCar = String.valueOf((computePoints()));
@@ -89,12 +97,11 @@ public class CarFragment extends Fragment {
     }
 
     public void updateDateTime(int year, int month, int day) {
-        date.setText(Integer.toString(day) + Integer.toString(month) +Integer.toString(year) );
+        date.setText(Integer.toString(day) + Integer.toString(month) + Integer.toString(year));
     }
 
 
-
-    public int computePoints(){
+    public int computePoints() {
         String fuelType = (String) spinner.getSelectedItem();
         String vehicleSize = (String) spinner2.getSelectedItem();
         int distanceTravelled = Integer.parseInt(distance.getText().toString());
@@ -109,21 +116,21 @@ public class CarFragment extends Fragment {
         int totalPointsTravel = pointsFromFuelType(fuelType) +
                 pointsFromVehicleSize(vehicleSize) + extracted(distanceTravelled);
 
-       return totalPointsTravel;
+        return totalPointsTravel;
 
     }
 
     private int extracted(int distanceTravelled) {
         int pointDistanceTravelled;
-        if(distanceTravelled <= 20){
+        if (distanceTravelled <= 20) {
             pointDistanceTravelled = 5;
-        }else if (distanceTravelled <= 50){
+        } else if (distanceTravelled <= 50) {
             pointDistanceTravelled = 6;
-        }else if(distanceTravelled <= 80){
+        } else if (distanceTravelled <= 80) {
             pointDistanceTravelled = 7;
-        }else if(distanceTravelled <= 120){
+        } else if (distanceTravelled <= 120) {
             pointDistanceTravelled = 8;
-        }else {
+        } else {
             pointDistanceTravelled = 10;
         }
         return pointDistanceTravelled;
@@ -131,11 +138,11 @@ public class CarFragment extends Fragment {
 
     private int pointsFromVehicleSize(String vehicleSize) {
         int pointVehicleSize;
-        if(vehicleSize.equals("Small")){
+        if (vehicleSize.equals("Small")) {
             pointVehicleSize = 3;
-        }else if (vehicleSize.equals("SUV")){
+        } else if (vehicleSize.equals("SUV")) {
             pointVehicleSize = 5;
-        }else{
+        } else {
             pointVehicleSize = 8;
         }
         return pointVehicleSize;
@@ -143,15 +150,29 @@ public class CarFragment extends Fragment {
 
     private int pointsFromFuelType(String fuelType) {
         int pointFuelType;
-        if(fuelType.equals("Diesel")){
+        if (fuelType.equals("Diesel")) {
             pointFuelType = 10;
-        } else if(fuelType.equals("Petrol")){
+        } else if (fuelType.equals("Petrol")) {
             pointFuelType = 8;
-        } else if (fuelType.equals("Hybrid")){
+        } else if (fuelType.equals("Hybrid")) {
             pointFuelType = 6;
-        }else {
+        } else {
             pointFuelType = 4;
         }
         return pointFuelType;
     }
-}
+
+    @SuppressLint("Range")
+    public void updatePoints(View view) {
+
+        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
+        Cursor cursor = db.query(MyDbAdapter.myDbHelper.TABLE_NAME, null, null, null, null, null, null);
+        initialPoints = cursor.getInt(cursor.getColumnIndex(MyDbAdapter.myDbHelper.MyPoints));
+
+        int a = myDbHelper.updatePoints(initialPoints, newPoints);
+        newPoints = initialPoints + computePoints();
+        }
+
+    }
+
+

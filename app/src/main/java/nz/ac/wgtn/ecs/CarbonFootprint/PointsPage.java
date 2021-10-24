@@ -35,6 +35,8 @@ public class PointsPage extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points_page);
 
+
+
         //get username
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("current_username", "userName");

@@ -14,6 +14,7 @@ public class CarbonFootprintRecorder extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carbon_footprint_recorder);
+
         //Get the user name from the SharedPreferences
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("current_username","userName");
