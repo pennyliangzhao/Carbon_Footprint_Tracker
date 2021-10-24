@@ -182,7 +182,7 @@
     <Button
         android:id="@+id/savePointsBtn"
         android:layout_width="179dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:backgroundTint="@color/cf_orange"
         android:fontFamily="@font/montserrat"
         android:text="@string/save_points"

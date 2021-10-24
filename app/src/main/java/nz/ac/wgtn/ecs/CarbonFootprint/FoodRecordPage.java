@@ -23,10 +23,6 @@ public class FoodRecordPage extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_record_page);
         textView = findViewById(R.id.totalFoodPoints);
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","");
-        TextView textView = findViewById(R.id.userNameMessage);
-        textView.setText(userName);
     }
 
     public void onCheckboxClicked(View view) {

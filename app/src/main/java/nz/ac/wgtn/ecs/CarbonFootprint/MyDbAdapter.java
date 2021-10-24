@@ -4,11 +4,9 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.preference.PreferenceManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +21,8 @@ public class MyDbAdapter {
         //Crete default users
         defaultUsers.put("rhea", new User("rhea", "123", 0));
         defaultUsers.put("yuri", new User("yuri", "456", 0));
+        defaultUsers.put("yuri", new User("penny", "789", 0));
+        defaultUsers.put("yuri", new User("lou", "910", 0));
 
     }
 
@@ -93,7 +93,7 @@ public class MyDbAdapter {
 
             try {
                 db.execSQL(CREATE_TABLE);
-               //fillDatabaseWithDefaultUsers();
+                //fillDatabaseWithData(db);
             } catch (Exception e) {
                 Message.message(context, "" + e);
             }
