@@ -11,7 +11,7 @@
     <string name="don_t_have_an_account">还没有账户?</string>
     <string name="login">登录</string>
     <string name="earth_logo">earth_logo</string>
-    <string name="good_afternoon">你好</string>
+    <string name="good_afternoon">您好</string>
     <string name="profile">用户资料</string>
     <string name="record_footprint">碳足迹记录</string>
     <string name="check_points">参看您的分数</string>
@@ -83,7 +83,7 @@
     <string name="Chinese">中文模式</string>
     <string name="invalid_input">您输入的密码或用户名有误</string>
     <string name="enter">请输入您的用户名及密码</string>
-    <string name="login_successfully">成功登录</string>
+    <string name="login_successfully">登录成功</string>
     <string name="user_name">用户名</string>
     <string name="enter_name">请输入姓名</string>
     <string name="password">密码</string>
@@ -92,4 +92,12 @@
     <string name="delete">删除</string>
     <string name="current_name">目前姓名</string>
     <string name="new_name">新名字</string>
+    <string name="calculate_points">计算分数</string>
+    <string name="travel_type">行程方式</string>
+    <string name="type_of_flight">飞机类型</string>
+    <string name="class_flight">航班</string>
+    <string name="car">轿车</string>
+    <string name="bicycle">自行车</string>
+    <string name="airplane">飞机</string>
+    <string name="walk">步行</string>
 </resources>
