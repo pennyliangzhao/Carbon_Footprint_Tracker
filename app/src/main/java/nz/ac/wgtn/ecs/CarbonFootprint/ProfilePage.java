@@ -20,7 +20,7 @@ public class ProfilePage extends BaseActivity {
 
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","userName");
+        String userName = preferences.getString("current_user","userName" );
         TextView textView = findViewById(R.id.welcome2);
         textView.setText(userName);
     }

@@ -23,7 +23,7 @@ public class ActionRecorderPage extends BaseActivity {
             setContentView(R.layout.activity_action_recorder_page);
             textView = findViewById(R.id.totalActionPoints);
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-            String userName = preferences.getString("current_username","");
+            String userName = preferences.getString("current_user","userName" );
             TextView textView = findViewById(R.id.userName);
             textView.setText(userName);
         }
