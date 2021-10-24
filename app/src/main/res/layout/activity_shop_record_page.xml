@@ -7,6 +7,106 @@
     android:background="@color/cf_green"
     tools:context=".ShopRecordPage">
 
+    <CheckBox
+        android:id="@+id/shop_cosmetics_retailers"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/cosmetics_retailers"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <CheckBox
+        android:id="@+id/shop_outdoor_retailers"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/outdoor_retailers"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <CheckBox
+        android:id="@+id/shop_homeware_retailers"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/homeware_retailers"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <CheckBox
+        android:id="@+id/shop_supermarket_retailers"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/supermarket_retailers"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
+
+    <CheckBox
+        android:id="@+id/shop_clothing_retailers"
+        android:layout_width="268dp"
+        android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/clothing_retailers"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438" />
+
     <TextView
         android:id="@+id/goodAfternoonMessage"
         android:layout_width="179dp"
@@ -78,40 +178,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.183" />
 
-    <RadioButton
-        android:id="@+id/gardeningRetailersBtn"
-        android:layout_width="265dp"
-        android:layout_height="64dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/outdoor_retailers"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
-
-    <RadioButton
-        android:id="@+id/clothingRetailersBtn"
-        android:layout_width="269dp"
-        android:layout_height="60dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/clothing_retailers"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
-
     <ImageView
         android:id="@+id/gardeningIcon"
         android:layout_width="60dp"
@@ -138,23 +204,6 @@
         app:layout_constraintVertical_bias="0.679"
         app:srcCompat="@drawable/homeware_goods_icon" />
 
-    <RadioButton
-        android:id="@+id/beautyProductsBtn"
-        android:layout_width="265dp"
-        android:layout_height="64dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/cosmetics_retailers"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
-
     <ImageView
         android:id="@+id/clothingIcon"
         android:layout_width="60dp"
@@ -167,40 +216,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.438"
         app:srcCompat="@drawable/clothing_icon" />
-
-    <RadioButton
-        android:id="@+id/supermarketsBtn"
-        android:layout_width="272dp"
-        android:layout_height="59dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/supermarket_retailers"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
-
-    <RadioButton
-        android:id="@+id/homewaresBtn"
-        android:layout_width="263dp"
-        android:layout_height="66dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/homeware_retailers"
-        android:textAlignment="center"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
 
     <ImageView
         android:id="@+id/cosmeticsIcon"
@@ -244,19 +259,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.959" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/total_shop_points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textview"
+        android:text="@string/total_shop_points"
         android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.879" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
