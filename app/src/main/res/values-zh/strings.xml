@@ -100,4 +100,12 @@
     <string name="bicycle">自行车</string>
     <string name="airplane">飞机</string>
     <string name="walk">步行</string>
+    <string name="diesel">柴油</string>
+    <string name="petrol">汽油</string>
+    <string name="hybrid">混合动力</string>
+    <string name="full_ev">全动力</string>
+    <string name="small">小型</string>
+    <string name="suv">SUV</string>
+    <string name="van">卡车</string>
+    <string name="update">加载</string>
 </resources>

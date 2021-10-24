@@ -74,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.109" />
 
     <TextView
         android:id="@+id/textView12"
@@ -122,8 +122,8 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
+        android:layout_width="96dp"
+        android:layout_height="56dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/shop_wisely"
@@ -186,8 +186,8 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/conserve_energy"
@@ -218,8 +218,8 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="95dp"
-        android:layout_height="57dp"
+        android:layout_width="94dp"
+        android:layout_height="50dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/bike_more"

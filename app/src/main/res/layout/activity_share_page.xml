@@ -41,8 +41,8 @@
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="110dp"
-        android:layout_height="35dp"
+        android:layout_width="193dp"
+        android:layout_height="44dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="User  Name"
@@ -52,10 +52,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.111" />
 
     <TextView
         android:id="@+id/textView15"
@@ -121,6 +121,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33"
+        app:layout_constraintVertical_bias="0.391"
         app:srcCompat="@drawable/share_page" />
 </androidx.constraintlayout.widget.ConstraintLayout>
