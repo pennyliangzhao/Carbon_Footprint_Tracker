@@ -20,6 +20,7 @@ public class MyCameraActivity extends Activity
     private static final int CAMERA_REQUEST = 1888;
     private ImageView imageView;
     private ImageView profileOne;
+    private ImageView profileTwo;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
 
     @Override
@@ -30,6 +31,7 @@ public class MyCameraActivity extends Activity
         this.imageView = this.findViewById(R.id.imageView1);
         Button photoButton = this.findViewById(R.id.button1);
         profileOne = findViewById(R.id.profile1);
+        profileTwo = findViewById(R.id.profile2);
         photoButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -49,6 +51,13 @@ public class MyCameraActivity extends Activity
     }
 
     public void profileOneClick(View view) {
+        ImageView iv = (ImageView)view;
+        BitmapDrawable drawable = (BitmapDrawable) iv.getBackground();
+        Bitmap bitmap = drawable.getBitmap();
+        goBackToSetting(bitmap);
+    }
+
+    public void profileTwoClick(View view) {
         ImageView iv = (ImageView)view;
         BitmapDrawable drawable = (BitmapDrawable) iv.getBackground();
         Bitmap bitmap = drawable.getBitmap();

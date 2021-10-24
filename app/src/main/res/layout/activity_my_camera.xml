@@ -27,8 +27,9 @@
             android:id="@+id/profile2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@drawable/_mary"
-            android:layout_gravity="center"/>
+            android:onClick="profileTwoClick" />
 
         <Button
             android:id="@+id/button1"
