@@ -94,5 +94,9 @@
     <string name="travel_type">Travel Type</string>
     <string name="type_of_flight"> Type of Flight</string>
     <string name="class_flight">Class</string>
+    <string name="car">car</string>
+    <string name="bicycle">bicycle</string>
+    <string name="airplane">airplane</string>
+    <string name="walk">walk</string>
 
 </resources>

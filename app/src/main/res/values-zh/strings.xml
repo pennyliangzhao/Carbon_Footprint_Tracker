@@ -96,4 +96,8 @@
     <string name="travel_type">行程方式</string>
     <string name="type_of_flight">飞机类型</string>
     <string name="class_flight">航班</string>
+    <string name="car">轿车</string>
+    <string name="bicycle">自行车</string>
+    <string name="airplane">飞机</string>
+    <string name="walk">步行</string>
 </resources>

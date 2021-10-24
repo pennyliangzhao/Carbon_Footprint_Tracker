@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:justificationMode="inter_word"
-            android:text="TextView"
+            android:text="@string/textview"
             android:textAllCaps="false"
             android:textColor="#004D40"
             android:textSize="20sp"
@@ -168,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
-                android:text="car"
+                android:text="@string/car"
                 android:textAlignment="center" />
 
             <TextView
@@ -176,7 +176,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="bicycle"
+                android:text="@string/bicycle"
                 android:textAlignment="center" />
 
             <TextView
@@ -184,7 +184,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="airplane"
+                android:text="@string/airplane"
                 android:textAlignment="center" />
 
             <TextView
@@ -192,7 +192,7 @@
                 android:layout_width="4dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="train"
+                android:text="@string/train"
                 android:textAlignment="center" />
 
             <TextView
@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:text="walk"
+                android:text="@string/walk"
                 android:textAlignment="center" />
         </LinearLayout>
 
