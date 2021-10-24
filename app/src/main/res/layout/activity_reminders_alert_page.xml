@@ -42,7 +42,8 @@
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.07"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/avatar2"
@@ -56,7 +57,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.062"
-        app:srcCompat="@drawable/girl" />
+        app:srcCompat="@drawable/girl"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/userName"
@@ -105,7 +107,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.278"
-        app:srcCompat="@drawable/rectangle_742" />
+        app:srcCompat="@drawable/rectangle_742"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -118,7 +122,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.74"
-        app:srcCompat="@drawable/shop" />
+        app:srcCompat="@drawable/shop"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView16"
@@ -150,7 +156,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        app:srcCompat="@drawable/plant" />
+        app:srcCompat="@drawable/plant"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView22"
@@ -182,7 +189,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.737"
-        app:srcCompat="@drawable/energy" />
+        app:srcCompat="@drawable/energy"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView17"
@@ -214,7 +222,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959"
-        app:srcCompat="@drawable/bike" />
+        app:srcCompat="@drawable/bike"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView21"
