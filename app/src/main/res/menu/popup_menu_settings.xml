@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/popup_light"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/popup_light"
+        android:icon="@drawable/light_mode"
         android:title="Light Mode"
-        android:icon="@drawable/dark_sun_foreground"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
     <item
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/popup_dark"
         android:title="Dark mode"
-        android:icon="@drawable/dark_moon_foreground"
+        android:icon="@drawable/dark_mode"
         app:showAsAction="always"/>
 </menu>
