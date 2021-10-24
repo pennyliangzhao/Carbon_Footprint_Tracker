@@ -13,11 +13,11 @@ import java.util.Map;
 
 
 public class MyDbAdapter {
-    myDbHelper helper;
+    myDbHelper myhelper;
     private HashMap<String, User> defaultUsers = new HashMap<>();
 
     public MyDbAdapter(Context context) {
-        helper = new myDbHelper(context);
+        myhelper = new myDbHelper(context);
         //Crete default users
         defaultUsers.put("rhea", new User("rhea", "123", 0));
         defaultUsers.put("yuri", new User("yuri", "456", 0));
@@ -33,7 +33,7 @@ public class MyDbAdapter {
     }
 
     public long insertData(String name, String pass) {
-        SQLiteDatabase dbb = helper.getWritableDatabase();
+        SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(myDbHelper.NAME, name);
         contentValues.put(myDbHelper.MyPASSWORD, pass);
@@ -42,7 +42,7 @@ public class MyDbAdapter {
     }
 
     public String getData() {
-        SQLiteDatabase db = helper.getWritableDatabase();
+        SQLiteDatabase db = myhelper.getWritableDatabase();
         String[] columns = {myDbHelper.UID, myDbHelper.NAME, myDbHelper.MyPASSWORD};
         Cursor cursor = db.query(myDbHelper.TABLE_NAME, columns, null, null, null, null, null);
         StringBuffer buffer = new StringBuffer();
@@ -56,7 +56,7 @@ public class MyDbAdapter {
     }
 
     public int delete(String uname) {
-        SQLiteDatabase db = helper.getWritableDatabase();
+        SQLiteDatabase db = myhelper.getWritableDatabase();
         String[] whereArgs = {uname};
 
         int count = db.delete(myDbHelper.TABLE_NAME, myDbHelper.NAME + " = ?", whereArgs);
@@ -64,7 +64,7 @@ public class MyDbAdapter {
     }
 
     public int updateName(String oldName, String newName) {
-        SQLiteDatabase db = helper.getWritableDatabase();
+        SQLiteDatabase db = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(myDbHelper.NAME, newName);
         String[] whereArgs = {oldName};
