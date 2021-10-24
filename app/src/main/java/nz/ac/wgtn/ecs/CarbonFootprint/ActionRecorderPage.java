@@ -1,6 +1,10 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -12,16 +16,21 @@ public class ActionRecorderPage extends BaseActivity {
         private static final double CONSERVE_ENERGY_POINTS = 17.0;
         private static final double RECYCLE_POINTS = 20.0;
         private static final double BIKE_MORE_POINTS = 12.0;
-        private static final double LESS_DISPOSABLE_PACKAGING_POINTS = 13.0;
-        private static final double PLANT_TREE_POINTS = 30.0;
+        private static final double LESS_DISPOSABLE_PACKAGING_POINTS = 10.0;
+        private static final double PLANT_TREE_POINTS = 10.0;
 
         private TextView textView;
+        MyDbAdapter myDbHelper;
+        private int initialActionPoints = 0;
+        int actionPoints;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_action_recorder_page);
             textView = findViewById(R.id.totalActionPoints);
+
+
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
             String userName = preferences.getString("current_user","userName" );
             TextView textView = findViewById(R.id.userName);
@@ -65,7 +74,22 @@ public class ActionRecorderPage extends BaseActivity {
             }
         }
 
-        public void savePoints(View view) {
-            //textView.setText(Double.toString(totalFoodPoints));
-        }
+    public void savePoints(View view) {
+        //updatePoints(view);
+        String actionPoints = String.valueOf(totalActionPoints);
+        Intent i = new Intent(this, CarbonFootprintRecorder.class);
+        i.putExtra("pointsAction",  actionPoints);
+        startActivity(i);
     }
+
+    @SuppressLint("Range")
+    public int updatePoints(View view) {
+        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
+        String[] whereArgs = {String.valueOf(initialActionPoints)};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MyDbAdapter.myDbHelper.FOOD_POINTS, actionPoints);
+        int count = db.update(MyDbAdapter.myDbHelper.TABLE_NAME, contentValues, MyDbAdapter.myDbHelper.FOOD_POINTS + " = ?", whereArgs);
+        return count;
+    }
+
+}

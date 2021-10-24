@@ -44,23 +44,14 @@ public class PointsPage extends BaseActivity {
         textView.setText(userName);
 
 
-        Intent secondIntent = getIntent();
-        pointsCar = secondIntent.getStringExtra("pointsCar");
-
-        if(pointsCar.equals(null)){
-            travel = 1;
-        }else{
-            travel = Integer.parseInt(pointsCar);
-        }
+        Intent carIntent = getIntent();
+        pointsCar = carIntent.getStringExtra("pointsCar");
+        travel = Integer.parseInt(pointsCar);
 
         Intent foodIntent = getIntent();
         pointsFood = foodIntent.getStringExtra("pointsFood");
+        food = Integer.parseInt(pointsFood);
 
-        if(pointsFood.equals(null)){
-            food = 1;
-        }else{
-            food = Integer.parseInt(pointsFood);
-        }
 
         int total = travel + food + shop + action;
 

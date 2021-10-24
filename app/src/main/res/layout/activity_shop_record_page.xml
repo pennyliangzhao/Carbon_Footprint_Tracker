@@ -255,6 +255,7 @@
         android:textColor="#0D47A1"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:onClick="savePoints"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

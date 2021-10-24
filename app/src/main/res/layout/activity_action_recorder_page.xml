@@ -186,6 +186,7 @@
         android:backgroundTint="@color/cf_orange"
         android:fontFamily="@font/montserrat"
         android:text="@string/save_points"
+        android:onClick="savePoints"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#0D47A1"

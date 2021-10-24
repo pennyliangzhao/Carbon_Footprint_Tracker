@@ -1,7 +1,12 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -17,6 +22,10 @@ public class ShopRecordPage extends BaseActivity {
     private static final double GARDENING_RETAILER_POINTS = 12.0;
 
     private TextView textView;
+
+    MyDbAdapter myDbHelper;
+    private int initialShopPoints = 0;
+    int shopPoints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +77,20 @@ public class ShopRecordPage extends BaseActivity {
     }
 
     public void savePoints(View view) {
-        //textView.setText(Double.toString(totalFoodPoints));
+        //updatePoints(view);
+        String shopPoints = String.valueOf(totalShopPoints);
+        Intent i = new Intent(this, CarbonFootprintRecorder.class);
+        i.putExtra("pointsShop",  shopPoints);
+        startActivity(i);
+    }
+
+    @SuppressLint("Range")
+    public int updatePoints(View view) {
+        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
+        String[] whereArgs = {String.valueOf(initialShopPoints)};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MyDbAdapter.myDbHelper.FOOD_POINTS, shopPoints);
+        int count = db.update(MyDbAdapter.myDbHelper.TABLE_NAME, contentValues, MyDbAdapter.myDbHelper.FOOD_POINTS + " = ?", whereArgs);
+        return count;
     }
 }

@@ -1,8 +1,11 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -19,17 +22,22 @@ public class FoodRecordPage extends BaseActivity {
 
     private TextView textView;
 
+    MyDbAdapter myDbHelper;
+    private int initialFoodPoints = 0;
+    int foodPoints;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_record_page);
         textView = findViewById(R.id.totalFoodPoints);
 
-        //Get the user name from the SharedPreferences
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","userName");
-        TextView textView = findViewById(R.id.userName);
-        textView.setText(userName);
+
+//        //Get the user name from the SharedPreferences
+//        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        String userName = preferences.getString("current_username","userName");
+//        TextView textView = findViewById(R.id.userName);
+//        textView.setText(userName);
     }
 
     public void onCheckboxClicked(View view) {
@@ -74,9 +82,21 @@ public class FoodRecordPage extends BaseActivity {
     }
 
     public void savePoints(View view) {
+        //updatePoints(view);
         String foodPoints = String.valueOf(totalFoodPoints);
-        Intent i = new Intent(this, PointsPage.class);
-        i.putExtra("pointsFood", foodPoints);
+        Intent i = new Intent(this, CarbonFootprintRecorder.class);
+        i.putExtra("pointsFood",  foodPoints);
         startActivity(i);
     }
+
+    @SuppressLint("Range")
+    public int updatePoints(View view) {
+        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
+        String[] whereArgs = {String.valueOf(initialFoodPoints)};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MyDbAdapter.myDbHelper.FOOD_POINTS, foodPoints);
+        int count = db.update(MyDbAdapter.myDbHelper.TABLE_NAME, contentValues, MyDbAdapter.myDbHelper.FOOD_POINTS + " = ?", whereArgs);
+        return count;
+    }
+
 }

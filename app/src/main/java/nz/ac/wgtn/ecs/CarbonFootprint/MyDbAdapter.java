@@ -16,6 +16,7 @@ public class MyDbAdapter {
     myDbHelper myhelper;
     private HashMap<String, User> defaultUsers = new HashMap<>();
 
+
     public MyDbAdapter(Context context) {
         myhelper = new myDbHelper(context);
         //Crete default users
@@ -93,9 +94,19 @@ public class MyDbAdapter {
         static final String NAME = "Name";    //Column II
         static final String MyPASSWORD = "Password";    // Column III
         static final String MyPoints = "Points";
+
         static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +
                 " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME + " VARCHAR(255) ," + MyPASSWORD + " VARCHAR(225) ," + MyPoints + ");";
-        static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
+
+        static final String TABLE_NAME_2 = "Points";   // Table Name
+        static final String TRAVEL_POINTS = "Travel";
+        static final String FOOD_POINTS = "Food";
+        static final String SHOP_POINTS = "Shop";
+        static final String ACTION_POINTS = "Action";
+        static final String CREATE_TABLE_POINTS = "CREATE TABLE " + TABLE_NAME_2 +
+                " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TRAVEL_POINTS  + FOOD_POINTS + SHOP_POINTS+ ACTION_POINTS + ");";
+        static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME_2;
+
         Context context;
 
         public myDbHelper(Context context) {
@@ -107,6 +118,7 @@ public class MyDbAdapter {
 
             try {
                 db.execSQL(CREATE_TABLE);
+                db.execSQL(CREATE_TABLE_POINTS);
                 //fillDatabaseWithData(db);
             } catch (Exception e) {
                 Message.message(context, "" + e);
@@ -125,4 +137,16 @@ public class MyDbAdapter {
             }
         }
     }
+
+    public long insertDataPoints(double travelPoint, double foodPoint, double shopPoint, double actionPoint) {
+        SQLiteDatabase dbb = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.TRAVEL_POINTS, travelPoint);
+        contentValues.put(myDbHelper.FOOD_POINTS, foodPoint);
+        contentValues.put(myDbHelper.SHOP_POINTS, shopPoint);
+        contentValues.put(myDbHelper.ACTION_POINTS, actionPoint);
+        long id = dbb.insert(myDbHelper.TABLE_NAME, null, contentValues);
+        return id;
+    }
+
 }
