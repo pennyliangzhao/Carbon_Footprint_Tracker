@@ -37,7 +37,7 @@ public class PointsPage extends BaseActivity {
 
         //get username
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username", "");
+        String userName = preferences.getString("current_username", "userName");
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
 

@@ -6,12 +6,10 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ProfilePage extends BaseActivity {
-
     private ImageView avatar;
 
     @Override
@@ -21,11 +19,8 @@ public class ProfilePage extends BaseActivity {
         avatar = findViewById(R.id.imageViewAvatar);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("current_username","");
-        TextView textView =findViewById(R.id.welcome2);
-        TextView textView1=findViewById(R.id.emailset);
-
+        TextView textView = findViewById(R.id.welcome2);
         textView.setText(userName);
-        textView1.setText(userName);
     }
 
     @Override
@@ -37,8 +32,8 @@ public class ProfilePage extends BaseActivity {
         }
     }
 
-    public void update(View view) {
-        Intent intent = new Intent(this, RegisterPage.class);
+    public void settingsBtnClick(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 

@@ -28,29 +28,32 @@ public class MyDbAdapter {
 
     public void fillDatabaseWithDefaultUsers() {
         for (Map.Entry<String, User> entry : defaultUsers.entrySet()) {
-            insertData(entry.getValue().getUserName(), entry.getValue().getPassword());
+            insertData(entry.getValue().getUserName(), entry.getValue().getPassword(), entry.getValue().getPoints());
         }
     }
 
-    public long insertData(String name, String pass) {
+    public long insertData(String name, String pass, double points) {
         SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(myDbHelper.NAME, name);
         contentValues.put(myDbHelper.MyPASSWORD, pass);
+        contentValues.put(myDbHelper.MyPoints, points);
         long id = dbb.insert(myDbHelper.TABLE_NAME, null, contentValues);
         return id;
     }
 
+    @SuppressLint("Range")
     public String getData() {
         SQLiteDatabase db = myhelper.getWritableDatabase();
-        String[] columns = {myDbHelper.UID, myDbHelper.NAME, myDbHelper.MyPASSWORD};
+        String[] columns = {myDbHelper.UID, myDbHelper.NAME, myDbHelper.MyPASSWORD, myDbHelper.MyPoints};
         Cursor cursor = db.query(myDbHelper.TABLE_NAME, columns, null, null, null, null, null);
         StringBuffer buffer = new StringBuffer();
         while (cursor.moveToNext()) {
-            @SuppressLint("Range") int cid = cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
-            @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex(myDbHelper.NAME));
-            @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex(myDbHelper.MyPASSWORD));
-            buffer.append(cid + "   " + name + "   " + password + " \n");
+             int cid = cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
+             String name = cursor.getString(cursor.getColumnIndex(myDbHelper.NAME));
+             String password = cursor.getString(cursor.getColumnIndex(myDbHelper.MyPASSWORD));
+             String points = cursor.getString(cursor.getColumnIndex(myDbHelper.MyPoints));
+            buffer.append(cid + "   " + name + "   " + password + " " + points + " \n");
         }
         return buffer.toString();
     }
@@ -79,8 +82,9 @@ public class MyDbAdapter {
         static final String UID = "_id";     // Column I (Primary Key)
         static final String NAME = "Name";    //Column II
         static final String MyPASSWORD = "Password";    // Column III
+        static final String MyPoints = "Points";
         static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +
-                " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME + " VARCHAR(255) ," + MyPASSWORD + " VARCHAR(225));";
+                " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME + " VARCHAR(255) ," + MyPASSWORD + " VARCHAR(225) ," + MyPoints + ");";
         static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
         Context context;
 

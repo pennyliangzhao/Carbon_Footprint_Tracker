@@ -25,7 +25,7 @@ public class ShopRecordPage extends BaseActivity {
         textView = findViewById(R.id.total_shop_points);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","");
+        String userName = preferences.getString("current_user","userName" );
         TextView textView = findViewById(R.id.userNameMessage);
         textView.setText(userName);
     }

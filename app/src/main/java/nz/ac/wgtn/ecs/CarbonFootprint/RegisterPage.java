@@ -10,6 +10,7 @@ import android.widget.EditText;
 public class RegisterPage extends AppCompatActivity {
     EditText Name, Pass, updateold, updatenew, delete;
     MyDbAdapter helper;
+   double points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,11 @@ public class RegisterPage extends AppCompatActivity {
     public void addUser(View view) {
         String t1 = Name.getText().toString();
         String t2 = Pass.getText().toString();
+        double t3 = points;
         if (t1.isEmpty() || t2.isEmpty()) {
             Message.message(getApplicationContext(), "Enter Both Name and Password");
         } else {
-            long id = helper.insertData(t1, t2);
+            long id = helper.insertData(t1, t2, t3);
             if (id <= 0) {
                 Message.message(getApplicationContext(), "Insertion Unsuccessful");
                 Name.setText("");

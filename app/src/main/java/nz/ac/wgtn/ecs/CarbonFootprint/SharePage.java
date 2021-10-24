@@ -22,7 +22,7 @@ public class SharePage extends BaseActivity {
         setContentView(R.layout.activity_share_page);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","");
+        String userName = preferences.getString("current_user","userName" );
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
     }
