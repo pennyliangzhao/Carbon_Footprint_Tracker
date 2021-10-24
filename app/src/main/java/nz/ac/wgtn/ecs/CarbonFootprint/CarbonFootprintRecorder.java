@@ -9,7 +9,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class CarbonFootprintRecorder extends BaseActivity {
-    String pointsCar;
+    int travelPoints;
     String pointsFood;
     String pointsShop;
     String pointsAction;
@@ -17,6 +17,8 @@ public class CarbonFootprintRecorder extends BaseActivity {
     TextView tVF;
     TextView tVS;
     TextView tVA;
+    private int userID;
+    private MyDbAdapter myDbHelper;
 
 
     @Override
@@ -24,10 +26,15 @@ public class CarbonFootprintRecorder extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carbon_footprint_recorder);
 
+        myDbHelper = new MyDbAdapter(this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userID = preferences.getInt("current_user_id", 0);
+
         Intent travelIntent = getIntent();
-        pointsCar = (travelIntent.getStringExtra("pointsCar"));
+        //pointsCar = (travelIntent.getStringExtra("pointsCar"));
+        travelPoints = myDbHelper.getTravelPoints(userID);
         tVC = findViewById(R.id.travelText);
-        tVC.setText(pointsCar);
+        tVC.setText(String.valueOf(travelPoints));
 
 
         Intent foodIntent = getIntent();
@@ -48,7 +55,7 @@ public class CarbonFootprintRecorder extends BaseActivity {
 
 
         //Get the user name from the SharedPreferences
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("current_username", "userName");
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);

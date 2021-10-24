@@ -3,12 +3,14 @@ package nz.ac.wgtn.ecs.CarbonFootprint;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,9 +23,9 @@ import android.widget.TextView;
 public class CarFragment extends Fragment {
     MyDbAdapter myDbHelper;
     SQLiteDatabase sqLiteDatabaseObj;
-    private int travelPoints;
     double initialPoints = 0;
     double newPoints;
+    private int travelPoints;
     private Button date;
     private Button calculatePoints;
     private Button savePoints;
@@ -33,6 +35,7 @@ public class CarFragment extends Fragment {
     private Spinner spinner2;
     private TextView distance;
     private TextView textview;
+    private int userID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,6 +51,9 @@ public class CarFragment extends Fragment {
         carFragment = this;
 
         myDbHelper = new MyDbAdapter(view.getContext());
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+        userID = preferences.getInt("current_user_id", 0);
 
         spinners(view);
 
@@ -71,6 +77,7 @@ public class CarFragment extends Fragment {
         savePoints.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                myDbHelper.updateTravelPoints(userID, computePoints());
                 String pointsCar = String.valueOf(computePoints());
                 Intent i = new Intent(getActivity(), CarbonFootprintRecorder.class);
                 i.putExtra("pointsCar", pointsCar);
@@ -118,6 +125,7 @@ public class CarFragment extends Fragment {
         int totalPointsTravel = pointsFromFuelType(fuelType) +
                 pointsFromVehicleSize(vehicleSize) + spinners(distanceTravelled);
 
+
         return totalPointsTravel;
 
     }
@@ -164,12 +172,12 @@ public class CarFragment extends Fragment {
         return pointFuelType;
     }
 
-    @SuppressLint("Range")
-    public int updatePoints(View view) {
-        int travelPoint = (int) computePoints();
-        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
-        return travelPoints = myDbHelper.updatePoints(initialPoints, computePoints());
-    }
+//    @SuppressLint("Range")
+//    public int updatePoints(View view) {
+//        int travelPoint = (int) computePoints();
+//        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
+//        return travelPoints = myDbHelper.updatePoints(initialPoints, computePoints());
+//    }
 }
 
 

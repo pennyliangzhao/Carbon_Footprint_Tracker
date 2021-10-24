@@ -31,9 +31,6 @@
             android:exported="true" />
 
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
-        <activity
             android:name=".WebViewActivity"
             android:exported="false" />
         <activity

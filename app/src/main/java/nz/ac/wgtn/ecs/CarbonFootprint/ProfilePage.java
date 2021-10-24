@@ -52,8 +52,8 @@ public class ProfilePage extends BaseActivity {
     }
 
     public void settingsBtnClick(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, SettingsActivity.class);
+//        startActivity(intent);
     }
 
     public void avatarBTN(View view){

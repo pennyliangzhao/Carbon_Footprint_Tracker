@@ -137,6 +137,7 @@ public class LoginPage extends BaseActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("current_user", user.getUserName());
+        editor.putInt("current_user_id", user.getUserID());
         editor.apply();
     }
 }
