@@ -16,12 +16,13 @@ import org.eazegraph.lib.models.PieModel;
 
 public class PointsPage extends BaseActivity {
 
-    String newString;
+    String pointsCar;
+    String pointsFood;
     private Button click;
     private PieChart chart;
     // private TextView pointsCar;
     private int travel;
-    private int food = 20;
+    private int food;
     private int shop = 30;
     private int action = 10;
     private int i1;
@@ -34,10 +35,6 @@ public class PointsPage extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points_page);
 
-        Intent secondIntent = getIntent();
-        newString = secondIntent.getStringExtra("pointsCar");
-
-
         //get username
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("current_username", "");
@@ -45,11 +42,24 @@ public class PointsPage extends BaseActivity {
         textView.setText(userName);
 
 
+        Intent secondIntent = getIntent();
+        pointsCar = secondIntent.getStringExtra("pointsCar");
 
-        travel = Integer.parseInt(newString);
+        if(pointsCar.equals(null)){
+            travel = 1;
+        }else{
+            travel = Integer.parseInt(pointsCar);
+        }
 
+        Intent foodIntent = getIntent();
+        pointsFood = foodIntent.getStringExtra("pointsFood");
 
-        Toast.makeText(PointsPage.this, newString, Toast.LENGTH_LONG).show();
+        if(pointsFood.equals(null)){
+            food = 1;
+        }else{
+            food = Integer.parseInt(pointsFood);
+        }
+
         int total = travel + food + shop + action;
 
         i1 = travel * 100 / total;
@@ -64,7 +74,7 @@ public class PointsPage extends BaseActivity {
             @Override
             public void onClick(View view) {
                 addToPieChart();
-                Toast.makeText(PointsPage.this, newString, Toast.LENGTH_LONG).show();
+                Toast.makeText(PointsPage.this, pointsCar, Toast.LENGTH_LONG).show();
             }
         });
 
