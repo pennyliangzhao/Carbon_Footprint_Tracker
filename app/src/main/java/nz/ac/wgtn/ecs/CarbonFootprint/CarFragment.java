@@ -1,6 +1,7 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
@@ -13,15 +14,19 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class CarFragment extends Fragment {
     private Button date;
+    private Button calculatePoints;
+    private Button savePoints;
     private DatePickerDialog datePickerDialog;
     private CarFragment carFragment;
     private Spinner spinner;
     private Spinner spinner2;
     private TextView distance;
+    private TextView textview;
 
 
     @Override
@@ -30,7 +35,10 @@ public class CarFragment extends Fragment {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_car, container, false);
         date = view.findViewById(R.id.date);
+        calculatePoints = view.findViewById(R.id.calculatePointsBtn);
+        savePoints = view.findViewById(R.id.savePointsBtn);
         distance = view.findViewById(R.id.distanceInput);
+        textview = view.findViewById(R.id.carPoints);
 
         carFragment = this;
 
@@ -48,6 +56,7 @@ public class CarFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner2.setAdapter(adapter2);
 
+
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +65,25 @@ public class CarFragment extends Fragment {
                         "mePicker");
             }
         });
+
+        calculatePoints.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String points = String.valueOf(computePoints());
+                textview.setText(points);
+            }
+        });
+
+        savePoints.setOnClickListener((new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String pointsCar = String.valueOf((computePoints()));
+                Intent i = new Intent(getActivity(), PointsPage.class);
+                i.putExtra("pointsCar", pointsCar);
+                startActivity(i);
+            }
+        }));
+
         return view;
 
     }
@@ -63,6 +91,8 @@ public class CarFragment extends Fragment {
     public void updateDateTime(int year, int month, int day) {
         date.setText(Integer.toString(day) + Integer.toString(month) +Integer.toString(year) );
     }
+
+
 
     public int computePoints(){
         String fuelType = (String) spinner.getSelectedItem();
@@ -124,5 +154,4 @@ public class CarFragment extends Fragment {
         }
         return pointFuelType;
     }
-
 }

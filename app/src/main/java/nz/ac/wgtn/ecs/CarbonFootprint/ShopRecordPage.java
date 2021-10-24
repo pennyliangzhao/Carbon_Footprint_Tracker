@@ -23,6 +23,7 @@ public class ShopRecordPage extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_record_page);
         textView = findViewById(R.id.total_shop_points);
+
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("current_username","");
         TextView textView = findViewById(R.id.userNameMessage);

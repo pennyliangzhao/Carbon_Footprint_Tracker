@@ -7,7 +7,7 @@
     tools:context=".CarFragment">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/savePointsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
@@ -107,7 +107,7 @@
         android:id="@+id/carPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="230dp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
@@ -115,5 +115,14 @@
         android:shadowRadius="1.6"
         android:text="TextView"
         android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/calculatePointsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="230dp"
+        android:backgroundTint="@color/cf_green"
+        android:text="Calculate Points" />
 
 </FrameLayout>

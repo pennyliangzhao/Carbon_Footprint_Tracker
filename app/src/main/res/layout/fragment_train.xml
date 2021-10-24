@@ -7,17 +7,26 @@
     tools:context=".TrainFragment">
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/carPoints2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="230dp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
         android:text="TextView"
-        android:textSize="32sp" />
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/calculatePointsBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="230dp"
+        android:backgroundTint="@color/cf_green"
+        android:text="Calculate Points" />
 
     <Button
         android:id="@+id/button7"
@@ -89,17 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="150dp"
-        android:text="@string/fuel_type"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="200dp"
-        android:text="@string/type_of_vehicle"
-        android:textColor="#263238"
+        android:text="TravelType"
         android:textSize="20sp" />
 
     <Spinner
@@ -108,12 +107,5 @@
         android:layout_height="40dp"
         android:layout_marginLeft="190dp"
         android:layout_marginTop="150dp" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="181dp"
-        android:layout_height="41dp"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="200dp" />
 
 </FrameLayout>

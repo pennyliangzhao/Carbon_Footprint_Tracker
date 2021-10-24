@@ -21,8 +21,8 @@ public class MyDbAdapter {
         //Crete default users
         defaultUsers.put("rhea", new User("rhea", "123", 0));
         defaultUsers.put("yuri", new User("yuri", "456", 0));
-        defaultUsers.put("yuri", new User("penny", "789", 0));
-        defaultUsers.put("yuri", new User("lou", "910", 0));
+        defaultUsers.put("penny", new User("penny", "789", 0));
+        defaultUsers.put("lou", new User("lou", "910", 0));
 
     }
 
