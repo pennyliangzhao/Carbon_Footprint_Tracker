@@ -13,7 +13,7 @@
         android:layout_height="35dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAllCaps="false"
         android:textColor="#004D40"
         android:textSize="30sp"

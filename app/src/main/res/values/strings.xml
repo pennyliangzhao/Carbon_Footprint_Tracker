@@ -98,5 +98,14 @@
     <string name="bicycle">bicycle</string>
     <string name="airplane">airplane</string>
     <string name="walk">walk</string>
+    <string name="diesel">Diesel</string>
+    <string name="petrol">Petrol</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="full_ev">Full EV</string>
+    <string name="small">Small</string>
+    <string name="suv">SUV</string>
+    <string name="van">VAN</string>
+    <string name="update">update</string>
+
 
 </resources>
