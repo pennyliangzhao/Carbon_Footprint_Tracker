@@ -15,7 +15,7 @@ public class MenuPage extends BaseActivity {
         setContentView(R.layout.activity_menu_page);
         //Get the user name from the SharedPreferences
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","");
+        String userName = preferences.getString("current_user","userName" );
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
     }

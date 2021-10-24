@@ -17,8 +17,10 @@ public class ProfilePage extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
         avatar = findViewById(R.id.imageViewAvatar);
+
+
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username","");
+        String userName = preferences.getString("current_username","userName");
         TextView textView = findViewById(R.id.welcome2);
         textView.setText(userName);
     }
