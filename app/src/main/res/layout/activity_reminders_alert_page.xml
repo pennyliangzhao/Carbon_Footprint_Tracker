@@ -28,8 +28,8 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="90dp"
-        android:layout_height="35dp"
+        android:layout_width="81dp"
+        android:layout_height="37dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/good_afternoon"
@@ -60,18 +60,18 @@
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
-        android:text="@string/userName"
+        android:text="@string/user_name"
         android:textAllCaps="false"
         android:textColor="#004D40"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07" />

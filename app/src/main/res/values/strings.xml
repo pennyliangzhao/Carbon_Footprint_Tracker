@@ -11,7 +11,7 @@
     <string name="login">Login</string>
     <string name="earth_logo">earth_logo</string>
     <string name="good_afternoon">Hello</string>
-    <string name="userName">TextView</string>
+    <string name="user_name">TextView</string>
     <string name="profile">Profile</string>
     <string name="record_footprint">Record Footprint</string>
     <string name="check_points">Check Points</string>
@@ -59,7 +59,7 @@
     <string name="fuel_type">Fuel Type</string>
     <string name="textview">TextView</string>
     <string name="distance_travelled">Distance Travelled</string>
-    <string name="select_date">Select Date...</string>
+    <string name="select_date">Select Date</string>
     <string name="conserve_energy">Conserve Energy</string>
     <string name="recycle">Recycle</string>
     <string name="bike_more">Bike More</string>
@@ -76,6 +76,19 @@
     <string name="total_food_points">Total Food Points</string>
     <string name="total_action_points">Total Action Points</string>
     <string name="total_shop_points">Total Shop Points</string>
-
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="English">English</string>
+    <string name="Chinese">Chinese</string>
+    <string name="invalid_input">Your password or username is invalid</string>
+    <string name="enter">Please Enter UserName or Password.</string>
+    <string name="login_successfully">Login Successfully.</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="password">password</string>
+    <string name="add_user">add_user</string>
+    <string name="delete_data">enter_name_to_delete_data</string>
+    <string name="delete">delete</string>
+    <string name="current_name">current_name</string>
+    <string name="new_name">new_name</string>
 
 </resources>

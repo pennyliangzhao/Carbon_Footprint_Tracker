@@ -42,7 +42,7 @@
             android:layout_marginTop="50dp"
             android:fontFamily="@font/montserrat"
             android:justificationMode="inter_word"
-            android:text="@string/userName"
+            android:text="@string/user_name"
             android:textAllCaps="false"
             android:textColor="#00695C"
             android:textSize="30sp"

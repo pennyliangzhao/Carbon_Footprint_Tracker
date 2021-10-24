@@ -6,13 +6,13 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:icon="@drawable/light_mode"
-        android:title="Light Mode"
+        android:title="@string/light_mode"
         app:showAsAction="always" />
     <item
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/popup_dark"
-        android:title="Dark mode"
+        android:title="@string/dark_mode"
         android:icon="@drawable/dark_mode"
         app:showAsAction="always"/>
 </menu>

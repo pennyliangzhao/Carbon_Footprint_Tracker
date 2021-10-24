@@ -83,7 +83,7 @@ public class LoginPage extends BaseActivity {
         } else {
 
             //If any of login EditText empty then this block will be executed.
-            Toast.makeText(LoginPage.this, "Please Enter UserName or Password.", Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginPage.this,R.string.invalid_input, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -108,7 +108,7 @@ public class LoginPage extends BaseActivity {
     public void CheckFinalResult() {
 
         if (TempPassword.equalsIgnoreCase(PasswordHolder)) {
-            Toast.makeText(LoginPage.this, "Login Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginPage.this,R.string.login_successfully, Toast.LENGTH_LONG).show();
             // Going to Dashboard activity after login success message.
             Intent intent = new Intent(this, MenuPage.class);
 
@@ -117,7 +117,7 @@ public class LoginPage extends BaseActivity {
             startActivity(intent);
 
         } else {
-            tvError.setText("Your password or username is invalid");
+            tvError.setText(R.string.enter);
         }
     }
 //        if(emailAdd.equals("admin") && pwd.equals("123")){

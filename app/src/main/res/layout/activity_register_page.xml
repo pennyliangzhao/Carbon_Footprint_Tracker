@@ -12,7 +12,7 @@
     android:background="@color/cf_green">
 
     <TextView
-        android:text="@string/userName"
+        android:text="@string/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -34,7 +34,7 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="enter_name"
+        android:hint="@string/enter_name"
         android:gravity="center_vertical|center" />
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="13dp"
         android:gravity="center"
-        android:text="password"
+        android:text="@string/password"
         android:textSize="18sp"
         android:textStyle="bold|italic" />
 
@@ -76,7 +76,7 @@
         android:layout_marginTop="52dp"
         android:backgroundTint="@color/cf_orange"
         android:onClick="addUser"
-        android:text="add_user"
+        android:text="@string/add_user"
         android:textSize="18sp"
         android:textStyle="bold|italic" />
 
@@ -109,7 +109,7 @@
         android:layout_toLeftOf="@+id/button2"
         android:ems="10"
         android:freezesText="false"
-        android:hint="enter_name_to_delete_data"
+        android:hint="@string/delete_data"
         android:inputType="textPersonName" />
 
     <Button
@@ -124,7 +124,7 @@
         android:layout_marginBottom="133dp"
         android:backgroundTint="@color/cf_orange"
         android:onClick="delete"
-        android:text="delete"
+        android:text="@string/delete"
         android:textStyle="normal|bold"
         tools:ignore="RelativeOverlap" />
 
@@ -139,7 +139,7 @@
         android:layout_marginLeft="49dp"
         android:layout_marginTop="59dp"
         android:ems="10"
-        android:hint="current_name"
+        android:hint="@string/current_name"
         android:inputType="textPersonName"
         android:textSize="14sp"
         android:textStyle="bold|italic" />
@@ -154,7 +154,7 @@
         android:layout_marginTop="11dp"
         android:ems="10"
         android:gravity="center_vertical|center"
-        android:hint="enter_password"
+        android:hint="@string/enter_password"
         android:inputType="textPassword"
         android:textAllCaps="false"
         android:textSize="18sp"
@@ -171,7 +171,7 @@
         android:layout_marginLeft="-2dp"
         android:layout_marginTop="23dp"
         android:ems="10"
-        android:hint="new_name"
+        android:hint="@string/new_name"
         android:inputType="textPersonName"
         android:textSize="14sp"
         android:textStyle="bold|italic" />

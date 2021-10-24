@@ -5,7 +5,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/popup_english"
-        android:title="English"
+        android:title="@string/English"
         android:icon="@drawable/english"
         app:showAsAction="always"/>
 
@@ -13,7 +13,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/popup_chinese"
-        android:title="中文"
+        android:title="@string/Chinese"
         android:icon="@drawable/chinese"
         app:showAsAction="always"/>
 
