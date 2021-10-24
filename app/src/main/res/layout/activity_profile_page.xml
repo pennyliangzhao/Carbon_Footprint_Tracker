@@ -25,9 +25,10 @@
 
         <ImageView
             android:id="@+id/imageViewAvatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="165dp"
             android:onClick="avatarBTN"
+            android:layout_marginLeft="65dp"
             app:srcCompat="@drawable/girl" />
 
         <Space
@@ -61,7 +62,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="80dp" />
+            android:layout_height="50dp" />
 
         <EditText
             android:id="@+id/emailset"
@@ -89,7 +90,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="1dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,38 +99,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                app:srcCompat="@android:drawable/ic_search_category_default" />
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
 
             <Space
                 android:layout_width="100dp"
                 android:layout_height="match_parent" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton4"
+            <Button
+                android:id="@+id/update"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                app:srcCompat="@android:drawable/ic_menu_help" />
-
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="match_parent" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:onClick="settingsBtnClick"
-                app:srcCompat="@android:drawable/ic_menu_manage" />
+                android:layout_below="@+id/editText3"
+                android:layout_alignStart="@+id/button4"
+                android:layout_alignLeft="@+id/button4"
+                android:layout_marginTop="13dp"
+                android:backgroundTint="@color/cf_orange"
+                android:onClick="update"
+                android:text="update"
+                android:textStyle="normal|bold" />
         </LinearLayout>
 
     </LinearLayout>
