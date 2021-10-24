@@ -11,6 +11,8 @@
         android:id="@+id/food_type_vegan"
         android:layout_width="268dp"
         android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:fontFamily="@font/montserrat"
         android:onClick="onCheckboxClicked"
         android:text="@string/vegan"
@@ -18,19 +20,19 @@
         android:textColor="#0D47A1"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <CheckBox
         android:id="@+id/food_type_vegetarian"
         android:layout_width="268dp"
         android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:fontFamily="@font/montserrat"
         android:onClick="onCheckboxClicked"
         android:text="@string/vegetarian"
@@ -38,19 +40,19 @@
         android:textColor="#0D47A1"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintVertical_bias="0.645" />
 
     <CheckBox
         android:id="@+id/food_type_light_meat"
         android:layout_width="268dp"
         android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:fontFamily="@font/montserrat"
         android:onClick="onCheckboxClicked"
         android:text="@string/light_meat"
@@ -58,19 +60,19 @@
         android:textColor="#0D47A1"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.517" />
 
     <CheckBox
         android:id="@+id/food_type_medium_meat"
         android:layout_width="268dp"
         android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:fontFamily="@font/montserrat"
         android:onClick="onCheckboxClicked"
         android:text="@string/medium_meat"
@@ -78,19 +80,19 @@
         android:textColor="#0D47A1"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.401" />
 
     <CheckBox
         android:id="@+id/food_type_heavy_meat"
         android:layout_width="268dp"
         android:layout_height="59dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:fontFamily="@font/montserrat"
         android:onClick="onCheckboxClicked"
         android:text="@string/heavy_meat"
@@ -98,14 +100,12 @@
         android:textColor="#0D47A1"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316" />
+        app:layout_constraintVertical_bias="0.291" />
 
     <TextView
         android:id="@+id/goodAfternoonMessage"
@@ -193,22 +193,39 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintVertical_bias="0.937" />
 
     <TextView
         android:id="@+id/totalFoodPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="27dp"
         android:text="@string/total_food_points"
         android:textColor="#263238"
+        android:textSize="20sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.873" />
+        app:layout_constraintVertical_bias="0.848" />
+
+    <Button
+        android:id="@+id/calculatePointsBtn3"
+        android:layout_width="183dp"
+        android:layout_height="36dp"
+        android:backgroundTint="@color/cf_green"
+        android:text="Calculate Points"
+        android:onClick="calculatePoints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858" />
 
     <ImageView
         android:id="@+id/heavyMeatIcon"
@@ -220,7 +237,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318"
+        app:layout_constraintVertical_bias="0.292"
         app:srcCompat="@drawable/heavy_meat_icon" />
 
     <ImageView
@@ -233,7 +250,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438"
+        app:layout_constraintVertical_bias="0.402"
         app:srcCompat="@drawable/medium_meat_icon" />
 
     <ImageView
@@ -246,7 +263,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557"
+        app:layout_constraintVertical_bias="0.518"
         app:srcCompat="@drawable/light_meat_icon" />
 
     <ImageView
@@ -259,7 +276,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679"
+        app:layout_constraintVertical_bias="0.646"
         app:srcCompat="@drawable/vegetarian_icon" />
 
     <ImageView
@@ -272,7 +289,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="0.771"
         app:srcCompat="@drawable/vegan_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

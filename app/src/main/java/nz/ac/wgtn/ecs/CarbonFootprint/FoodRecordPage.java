@@ -1,6 +1,7 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -9,12 +10,12 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class FoodRecordPage extends BaseActivity {
-    private double totalFoodPoints = 0;
-    private static final double HEAVY_MEAT_POINTS = 27.0;
-    private static final double MEDIUM_MEAT_POINTS = 12.0;
-    private static final double LIGHT_MEAT_POINTS = 8.0;
-    private static final double VEGETARIAN_POINTS = 3.0;
-    private static final double VEGAN_POINTS = 2.0;
+    private int totalFoodPoints = 0;
+    private static final int HEAVY_MEAT_POINTS = 27;
+    private static final int MEDIUM_MEAT_POINTS = 12;
+    private static final int LIGHT_MEAT_POINTS = 8;
+    private static final int VEGETARIAN_POINTS = 3;
+    private static final int VEGAN_POINTS = 2;
 
     private TextView textView;
 
@@ -62,7 +63,14 @@ public class FoodRecordPage extends BaseActivity {
         }
     }
 
+    public void calculatePoints(View view) {
+        textView.setText(Double.toString(totalFoodPoints));
+    }
+
     public void savePoints(View view) {
-        //textView.setText(Double.toString(totalFoodPoints));
+        String foodPoints = String.valueOf(totalFoodPoints);
+        Intent i = new Intent(this, PointsPage.class);
+        i.putExtra("pointsFood", foodPoints);
+        startActivity(i);
     }
 }
