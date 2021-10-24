@@ -19,7 +19,7 @@
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
-        android:text="Save Points"
+        android:text="@string/save_points"
         android:textColor="#00695C"
         android:textSize="22sp"
         android:textStyle="bold" />
@@ -113,7 +113,7 @@
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textSize="28sp" />
 
     <Button
@@ -123,6 +123,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="230dp"
         android:backgroundTint="@color/cf_green"
-        android:text="Calculate Points" />
+        android:text="@string/calculate_points" />
 
 </FrameLayout>

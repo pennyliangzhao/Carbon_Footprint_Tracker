@@ -90,5 +90,9 @@
     <string name="delete">delete</string>
     <string name="current_name">current_name</string>
     <string name="new_name">new_name</string>
+    <string name="calculate_points">Calculate Points</string>
+    <string name="travel_type">Travel Type</string>
+    <string name="type_of_flight"> Type of Flight</string>
+    <string name="class_flight">Class</string>
 
 </resources>

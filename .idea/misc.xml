@@ -8,7 +8,7 @@
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintGroupApplication/app/src/main/res/layout/activity_main.xml" value="0.3671875" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_action_recorder_page.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_carbon_footprint_recorder.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_food_record_page.xml" value="0.22" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_food_record_page.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_login_page.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_logout_page.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_menu_page.xml" value="0.22" />
@@ -45,7 +45,7 @@
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_profile_page.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_register_page.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_reminders_alert_page.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_settings.xml" value="0.1" />
+        <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_settings.xml" value="0.22" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_share_page.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_shop.xml" value="0.108984375" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_shop_record_page.xml" value="0.108984375" />
@@ -54,12 +54,13 @@
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_bike.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_car.xml" value="0.1" />
-        <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_plane.xml" value="0.1" />
+        <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_plane.xml" value="0.22" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_time_picker.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_train.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_walk.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/action_menu.xml" value="0.1" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/popup_menu.xml" value="0.1" />
+        <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/popup_menu_settings.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>
