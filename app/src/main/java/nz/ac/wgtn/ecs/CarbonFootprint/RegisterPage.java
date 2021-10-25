@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class RegisterPage extends AppCompatActivity {
     EditText Name, Pass, updateold, updatenew, delete;
     MyDbAdapter helper;
-   double points = 0;
+    private double points = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +20,6 @@ public class RegisterPage extends AppCompatActivity {
         Name = (EditText) findViewById(R.id.editName);
         Pass = (EditText) findViewById(R.id.editPass);
         updateold = (EditText) findViewById(R.id.editText3);
-        updatenew = (EditText) findViewById(R.id.editText5);
-        delete = (EditText) findViewById(R.id.editText6);
 
         helper = new MyDbAdapter(this);
     }
