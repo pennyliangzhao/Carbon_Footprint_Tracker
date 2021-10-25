@@ -92,20 +92,22 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="184dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="130dp" />
+        android:layout_marginTop="130dp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="181dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="180dp" />
+        android:layout_marginTop="180dp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/carPoints"
-        android:layout_width="wrap_content"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="230dp"
@@ -113,7 +115,6 @@
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
-        android:text="@string/textview"
         android:textSize="28sp" />
 
     <Button
