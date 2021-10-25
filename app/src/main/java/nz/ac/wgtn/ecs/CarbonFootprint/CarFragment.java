@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class CarFragment extends Fragment {
@@ -93,12 +94,12 @@ public class CarFragment extends Fragment {
         String[] values =
                 {"Diesel", "Petrol", "Hybrid", "Full EV",};
         spinner = (Spinner) view.findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
 
         String[] values2 =
-                {"Small", "SUV", "Van",};
+                {getString(R.string.small), getString(R.string.suv), getString(R.string.van)};
         spinner2 = (Spinner) view.findViewById(R.id.spinner2);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values2);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
@@ -113,6 +114,7 @@ public class CarFragment extends Fragment {
     public int computePoints() {
         String fuelType = (String) spinner.getSelectedItem();
         String vehicleSize = (String) spinner2.getSelectedItem();
+        int vehicleSizeIndex = spinner2.getSelectedItemPosition();
         int distanceTravelled = Integer.parseInt(distance.getText().toString());
 
 
