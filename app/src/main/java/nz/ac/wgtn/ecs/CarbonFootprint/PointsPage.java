@@ -73,13 +73,15 @@ public class PointsPage extends BaseActivity {
         click = findViewById(R.id.btn_click);
         chart = findViewById(R.id.pie_chart);
 
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addToPieChart();
-                Toast.makeText(PointsPage.this, pointsCar, Toast.LENGTH_LONG).show();
-            }
-        });
+//        click.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                addToPieChart();
+//                Toast.makeText(PointsPage.this, pointsCar, Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+        addToPieChart();
 
     }
 

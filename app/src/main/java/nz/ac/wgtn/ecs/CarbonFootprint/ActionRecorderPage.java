@@ -12,84 +12,80 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class ActionRecorderPage extends BaseActivity {
-        private double totalActionPoints = 0;
-        private static final double CONSERVE_ENERGY_POINTS = 17.0;
-        private static final double RECYCLE_POINTS = 20.0;
-        private static final double BIKE_MORE_POINTS = 12.0;
-        private static final double LESS_DISPOSABLE_PACKAGING_POINTS = 10.0;
-        private static final double PLANT_TREE_POINTS = 10.0;
+    private static final double CONSERVE_ENERGY_POINTS = 17.0;
+    private static final double RECYCLE_POINTS = 20.0;
+    private static final double BIKE_MORE_POINTS = 12.0;
+    private static final double LESS_DISPOSABLE_PACKAGING_POINTS = 10.0;
+    private static final double PLANT_TREE_POINTS = 10.0;
 
-        private TextView textView;
-        MyDbAdapter myDbHelper;
-        private int initialActionPoints = 0;
-        int actionPoints;
+    MyDbAdapter myDbHelper;
+    private double totalActionPoints = 0;
+    private TextView textView;
+    private TextView text;
+    private int actionPoints;
+    private int userID;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_action_recorder_page);
-            textView = findViewById(R.id.totalActionPoints);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_action_recorder_page);
+        textView = findViewById(R.id.totalActionPoints);
 
 
-            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-            String userName = preferences.getString("current_user","userName" );
-            TextView textView = findViewById(R.id.userName);
-            textView.setText(userName);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userID = preferences.getInt("current_user_id", 0);
+
+        myDbHelper = new MyDbAdapter(this);
+        //Get the initial foodPoints
+        actionPoints = myDbHelper.getActionPoints(userID);
+
+//        String userName = preferences.getString("current_user", "userName");
+//        TextView textView = findViewById(R.id.userName);
+//        textView.setText(userName);
+    }
+
+    public void onCheckboxClicked(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
+        switch (view.getId()) {
+            case R.id.conserve_energy:
+                if (checked) {
+                    totalActionPoints += CONSERVE_ENERGY_POINTS;
+                } else {
+                    totalActionPoints -= CONSERVE_ENERGY_POINTS;
+                }
+            case R.id.recycle:
+                if (checked) {
+                    totalActionPoints += RECYCLE_POINTS;
+                } else {
+                    totalActionPoints -= RECYCLE_POINTS;
+                }
+            case R.id.bike_more:
+                if (checked) {
+                    totalActionPoints += BIKE_MORE_POINTS;
+                } else {
+                    totalActionPoints -= BIKE_MORE_POINTS;
+                }
+            case R.id.less_disposable_packaging:
+                if (checked) {
+                    totalActionPoints += LESS_DISPOSABLE_PACKAGING_POINTS;
+                } else {
+                    totalActionPoints -= LESS_DISPOSABLE_PACKAGING_POINTS;
+                }
+            case R.id.plant_tree:
+                if (checked) {
+                    totalActionPoints += PLANT_TREE_POINTS;
+                } else {
+                    totalActionPoints -= PLANT_TREE_POINTS;
+                }
+                textView.setText(Double.toString(totalActionPoints));
         }
-
-        public void onCheckboxClicked(View view) {
-            boolean checked = ((CheckBox) view).isChecked();
-            switch (view.getId()) {
-                case R.id.conserve_energy:
-                    if (checked) {
-                        totalActionPoints += CONSERVE_ENERGY_POINTS;
-                    } else {
-                        totalActionPoints -= CONSERVE_ENERGY_POINTS;
-                    }
-                case R.id.recycle:
-                    if (checked) {
-                        totalActionPoints += RECYCLE_POINTS;
-                    } else {
-                        totalActionPoints -= RECYCLE_POINTS;
-                    }
-                case R.id.bike_more:
-                    if (checked) {
-                        totalActionPoints += BIKE_MORE_POINTS;
-                    } else {
-                        totalActionPoints -= BIKE_MORE_POINTS;
-                    }
-                case R.id.less_disposable_packaging:
-                    if (checked) {
-                        totalActionPoints += LESS_DISPOSABLE_PACKAGING_POINTS;
-                    } else {
-                        totalActionPoints -= LESS_DISPOSABLE_PACKAGING_POINTS;
-                    }
-                case R.id.plant_tree:
-                    if (checked) {
-                        totalActionPoints += PLANT_TREE_POINTS;
-                    } else {
-                        totalActionPoints -= PLANT_TREE_POINTS;
-                    }
-                    textView.setText(Double.toString(totalActionPoints));
-            }
-        }
+    }
 
     public void savePoints(View view) {
-        //updatePoints(view);
-        String actionPoints = String.valueOf(totalActionPoints);
+        myDbHelper.updateActionPoints(userID, (int) totalActionPoints);
         Intent i = new Intent(this, CarbonFootprintRecorder.class);
-        i.putExtra("pointsAction",  actionPoints);
         startActivity(i);
     }
 
-    @SuppressLint("Range")
-    public int updatePoints(View view) {
-        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
-        String[] whereArgs = {String.valueOf(initialActionPoints)};
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(MyDbAdapter.myDbHelper.FOOD_POINTS, actionPoints);
-        int count = db.update(MyDbAdapter.myDbHelper.TABLE_NAME, contentValues, MyDbAdapter.myDbHelper.FOOD_POINTS + " = ?", whereArgs);
-        return count;
-    }
 
 }
