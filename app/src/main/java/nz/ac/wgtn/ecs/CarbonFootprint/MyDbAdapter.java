@@ -155,18 +155,35 @@ public class MyDbAdapter {
         return points;
     }
 
+    public void updateActionPoints(int userID, int actionPoints) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.ACTION_POINTS, getActionPoints(userID) + actionPoints);
+
+        db.update(myDbHelper.TABLE_NAME, contentValues, myDbHelper.UID + "=" + userID, null);
+    }
+
+    public int getActionPoints(int userID) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + myDbHelper.TABLE_NAME + " WHERE " + myDbHelper.UID + " = " + userID, null);
+        cursor.moveToFirst();
+
+        int points = cursor.getInt(cursor.getColumnIndex(myDbHelper.ACTION_POINTS));
+        return points;
+    }
+
 
     static class myDbHelper extends SQLiteOpenHelper {
-        static final String DATABASE_NAME = "myDatabase";    // Database Name
-        static final String TABLE_NAME = "myTable";   // Table Name
-        static final int DATABASE_Version = 1;    // Database Version
-        static final String UID = "_id";     // Column I (Primary Key)
-        static final String NAME = "Name";    //Column II
-        static final String MyPASSWORD = "Password";    // Column III
-        static final String TRAVEL_POINTS = "Travel";
-        static final String FOOD_POINTS = "Food";
-        static final String SHOP_POINTS = "Shop";
-        static final String ACTION_POINTS = "ActionPoints";
+        static final String DATABASE_NAME = "myDatabase";       // Database Name
+        static final String TABLE_NAME = "myTable";          // Table Name
+        static final int DATABASE_Version = 1;                // Database Version
+        static final String UID = "_id";                    // Column I (Primary Key)
+        static final String NAME = "Name";                  //Column II
+        static final String MyPASSWORD = "Password";        // Column III
+        static final String TRAVEL_POINTS = "Travel";       // Column IV
+        static final String FOOD_POINTS = "Food";            // Column V
+        static final String SHOP_POINTS = "Shop";                 // Column VI
+        static final String ACTION_POINTS = "ActionPoints";      // Column VII
 
         static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +
                 " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME + " VARCHAR(255) ," + MyPASSWORD +

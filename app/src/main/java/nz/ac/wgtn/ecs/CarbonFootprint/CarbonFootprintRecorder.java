@@ -12,6 +12,7 @@ public class CarbonFootprintRecorder extends BaseActivity {
     int travelPoints;
     int foodPoints;
     int shopPoints;
+    int actionPoints;
     TextView tVC;
     TextView tVF;
     TextView tVS;
@@ -42,8 +43,9 @@ public class CarbonFootprintRecorder extends BaseActivity {
         tVS = findViewById(R.id.shopText);
         tVS.setText(String.valueOf(shopPoints));
 
-//        tVA = findViewById(R.id.actionText);
-//        tVA.setText("pointsAction");
+        actionPoints = myDbHelper.getActionPoints(userID);
+        tVA = findViewById(R.id.actionText);
+        tVA.setText(String.valueOf(actionPoints));
 
 
         //Get the user name from the SharedPreferences
