@@ -54,7 +54,8 @@ public class RegisterPage extends AppCompatActivity {
     }
 
     public void goToLogin(View view){
-
+        Intent i = new Intent(this, LoginPage.class);
+        startActivity(i);
     }
 }
 

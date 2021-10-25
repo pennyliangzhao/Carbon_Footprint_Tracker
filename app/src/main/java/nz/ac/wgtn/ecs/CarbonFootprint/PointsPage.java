@@ -48,17 +48,22 @@ public class PointsPage extends BaseActivity {
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
 
-        if(travelPoints == 0 && foodPoints == 0 && shopPoints == 0 && actionPoints == 0){
+        travelPoints = myDbHelper.getTravelPoints(userID);
+        foodPoints = myDbHelper.getFoodPoints(userID);
+        shopPoints = myDbHelper.getShopPoints(userID);
+        actionPoints = myDbHelper.getActionPoints(userID);
+
+        int total = travelPoints + foodPoints + shopPoints + actionPoints;
+
+        if(total == 0) {
             travelPoints = 1;
             foodPoints =1;
             shopPoints = 1;
             actionPoints = 1;
-        }else{
-            travelPoints = myDbHelper.getTravelPoints(userID);
-            foodPoints = myDbHelper.getFoodPoints(userID);
-            shopPoints = myDbHelper.getShopPoints(userID);
-            actionPoints = myDbHelper.getActionPoints(userID);
         }
+
+
+
         tVC = findViewById(R.id.textTravel);
         tVC.setText(String.valueOf(travelPoints));
 
@@ -71,7 +76,7 @@ public class PointsPage extends BaseActivity {
         tVA = findViewById(R.id.textAction);
         tVA.setText(String.valueOf(actionPoints));
 
-        int total = travelPoints + foodPoints + shopPoints + actionPoints;
+
 
         i1 = travelPoints * 100 / total;
         i2 = foodPoints * 100 / total;
@@ -103,5 +108,9 @@ public class PointsPage extends BaseActivity {
 
     }
 
+    public void recordPoints(View view){
+        Intent i = new Intent(this, CarbonFootprintRecorder.class);
+        startActivity(i);
+    }
 
 }

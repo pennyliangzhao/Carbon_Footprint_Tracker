@@ -18,7 +18,7 @@
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/cf_orange"
         android:onClick="goToLogin"
-        android:text="@string/add_user"
+        android:text="Log in"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
