@@ -51,5 +51,8 @@ public class RegisterPage extends AppCompatActivity {
         Message.message(this, data);
     }
 
+    public void goToLogin(View view){
+
+    }
 }
 
