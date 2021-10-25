@@ -16,72 +16,64 @@ import org.eazegraph.lib.models.PieModel;
 
 public class PointsPage extends BaseActivity {
 
-    private String pointsCar;
+
     private MyDbAdapter myDbHelper;
-    String pointsFood;
-    private Button click;
     private PieChart chart;
-    // private TextView pointsCar;
-    private int travel;
-    private int food =50;
-    private int shop = 30;
-    private int action = 10;
+
+    private int travelPoints;
+    private int foodPoints;
+    private int shopPoints;
+    private int actionPoints;
     private int i1;
     private int i2;
     private int i3;
     private int i4;
     private int userID;
 
+    TextView tVC;
+    TextView tVF;
+    TextView tVS;
+    TextView tVA;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points_page);
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_user", "userName");
-        userID = preferences.getInt("current_user_id", 0);
-        TextView textView = findViewById(R.id.userName);
-        textView.setText(userName);
-
-        //Get DB instance
         myDbHelper = new MyDbAdapter(this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userID = preferences.getInt("current_user_id", 0);
+
+        travelPoints = myDbHelper.getTravelPoints(userID);
+        tVC = findViewById(R.id.textTravel);
+        tVC.setText(String.valueOf(travelPoints));
 
 
-        travel = myDbHelper.getTravelPoints(userID);
+        foodPoints = myDbHelper.getFoodPoints(userID);
+        tVF = findViewById(R.id.textFood);
+        tVF.setText(String.valueOf(foodPoints));
 
-        //get username
-       // SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        shopPoints = myDbHelper.getShopPoints(userID);
+        tVS = findViewById(R.id.textShop);
+        tVS.setText(String.valueOf(shopPoints));
+
+        actionPoints = myDbHelper.getActionPoints(userID);
+        tVA = findViewById(R.id.textAction);
+        tVA.setText(String.valueOf(actionPoints));
+
+        int total = travelPoints + foodPoints + shopPoints + actionPoints;
+
+        i1 = travelPoints * 100 / total;
+        i2 = foodPoints * 100 / total;
+        i3 = shopPoints * 100 / total;
+        i4 = actionPoints * 100 / total;
 
 
 
-//        Intent carIntent = getIntent();
-//        pointsCar = carIntent.getStringExtra("pointsCar");
-//        travel = Integer.parseInt(pointsCar);
-//
-//        Intent foodIntent = getIntent();
-//        pointsFood = foodIntent.getStringExtra("pointsFood");
-//        food = Integer.parseInt(pointsFood);
-
-
-        int total = travel + food + shop + action;
-
-        i1 = travel * 100 / total;
-        i2 = food * 100 / total;
-        i3 = shop * 100 / total;
-        i4 = shop * 100 / total;
-//
-        click = findViewById(R.id.btn_click);
         chart = findViewById(R.id.pie_chart);
-
-//        click.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                addToPieChart();
-//                Toast.makeText(PointsPage.this, pointsCar, Toast.LENGTH_LONG).show();
-//            }
-//        });
-
         addToPieChart();
+
 
     }
 
@@ -94,6 +86,8 @@ public class PointsPage extends BaseActivity {
         chart.addPieSlice(new PieModel("Integer 4", i4, Color.parseColor("#2986F6")));
 
         chart.startAnimation();
-        click.setClickable(false);
+
     }
+
+
 }
