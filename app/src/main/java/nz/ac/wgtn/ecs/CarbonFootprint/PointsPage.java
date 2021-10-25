@@ -48,20 +48,26 @@ public class PointsPage extends BaseActivity {
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
 
-        travelPoints = myDbHelper.getTravelPoints(userID);
+        if(travelPoints == 0 && foodPoints == 0 && shopPoints == 0 && actionPoints == 0){
+            travelPoints = 1;
+            foodPoints =1;
+            shopPoints = 1;
+            actionPoints = 1;
+        }else{
+            travelPoints = myDbHelper.getTravelPoints(userID);
+            foodPoints = myDbHelper.getFoodPoints(userID);
+            shopPoints = myDbHelper.getShopPoints(userID);
+            actionPoints = myDbHelper.getActionPoints(userID);
+        }
         tVC = findViewById(R.id.textTravel);
         tVC.setText(String.valueOf(travelPoints));
 
-
-        foodPoints = myDbHelper.getFoodPoints(userID);
         tVF = findViewById(R.id.textFood);
         tVF.setText(String.valueOf(foodPoints));
 
-        shopPoints = myDbHelper.getShopPoints(userID);
         tVS = findViewById(R.id.textShop);
         tVS.setText(String.valueOf(shopPoints));
 
-        actionPoints = myDbHelper.getActionPoints(userID);
         tVA = findViewById(R.id.textAction);
         tVA.setText(String.valueOf(actionPoints));
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -36,16 +37,17 @@ public class RegisterPage extends AppCompatActivity {
                 Name.setText("");
                 Pass.setText("");
             } else {
-                Message.message(getApplicationContext(), "Insertion Successful");
+                Message.message(getApplicationContext(), "User successfully added");
                 Name.setText("");
                 Pass.setText("");
             }
         }
-
-        Intent i = new Intent(this, MenuPage.class);
-        startActivity(i);
     }
 
+    public void profileButton(View view){
+        Intent i = new Intent(this, LoginPage.class);
+        startActivity(i);
+    }
     public void viewdata(View view) {
         String data = helper.getData();
         Message.message(this, data);
