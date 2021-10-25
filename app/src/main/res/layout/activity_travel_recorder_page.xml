@@ -18,24 +18,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView6"
-            android:layout_width="179dp"
-            android:layout_height="43dp"
-            android:fontFamily="@font/montserrat"
-            android:justificationMode="inter_word"
-            android:text="@string/good_afternoon"
-            android:textAllCaps="false"
-            android:textColor="#004D40"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.112"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.047" />
-
-        <TextView
             android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,16 +37,17 @@
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="79dp"
-            android:layout_height="61dp"
+            android:layout_width="54dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="300dp"
             android:contentDescription="@string/avatar"
             android:fontFamily="@font/montserrat"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.848"
+            app:layout_constraintHorizontal_bias="0.952"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.049"
+            app:layout_constraintVertical_bias="0.063"
             app:srcCompat="@drawable/girl" />
 
         <TextView
@@ -123,11 +106,12 @@
 
             <ImageButton
                 android:id="@+id/planeButton"
-                android:onClick="planeButton"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="60dp"
                 android:layout_height="70dp"
-                app:srcCompat="@drawable/plane_1" />
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:onClick="planeButton"
+                app:srcCompat="@drawable/plane_1"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Space
                 android:layout_width="10dp"

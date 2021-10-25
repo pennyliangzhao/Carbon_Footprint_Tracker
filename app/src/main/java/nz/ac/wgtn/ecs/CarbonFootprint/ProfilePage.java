@@ -31,14 +31,11 @@ public class ProfilePage extends BaseActivity {
 
         avatar = findViewById(R.id.imageViewAvatar);
 
-
-//        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        String userName = preferences.getString("current_username","");
-//        TextView textView = findViewById(R.id.welcome2);
-//        TextView textView1 = findViewById(R.id.userName);
-//        textView1.setText(userName);
-//        textView.setText(userName);
-
+        //Get the user name from the SharedPreferences
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userName = preferences.getString("current_user","userName" );
+        TextView textView = findViewById(R.id.welcome);
+        textView.setText(userName);
 
     }
 
@@ -49,11 +46,6 @@ public class ProfilePage extends BaseActivity {
         if(object instanceof Bitmap) {
             avatar.setImageBitmap((Bitmap) object);
         }
-    }
-
-    public void settingsBtnClick(View view) {
-//        Intent intent = new Intent(this, SettingsActivity.class);
-//        startActivity(intent);
     }
 
     public void avatarBTN(View view){

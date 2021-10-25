@@ -50,19 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="20dp" />
 
-        <TextView
-            android:id="@+id/welcome2"
-            android:text="@string/setting_name"
-            android:textAlignment="center"
-            android:textColor="#0D47A1"
-            android:textSize="15sp"
-            android:fontFamily="@font/montserrat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="40dp" />
 
         <EditText
             android:id="@+id/oldusername"
