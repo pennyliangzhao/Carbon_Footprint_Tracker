@@ -89,10 +89,6 @@ public class CarbonFootprintRecorder extends BaseActivity {
 
     public void drawPieChart(View view) {
         Intent intent = new Intent(this, PointsPage.class);
-        intent.putExtra("carPoints", String.valueOf(tVC));
-        intent.putExtra("foodPoints", String.valueOf(tVF));
-        intent.putExtra("foodPoints", String.valueOf(tVS));
-        intent.putExtra("foodPoints", String.valueOf(tVA));
         startActivity(intent);
     }
 
