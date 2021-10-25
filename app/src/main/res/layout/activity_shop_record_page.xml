@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cf_green"
+    android:onClick="GobackMenu"
     tools:context=".ShopRecordPage">
 
     <TextView
@@ -149,6 +150,7 @@
         android:layout_height="48dp"
         android:contentDescription="@string/avatar"
         android:fontFamily="@font/montserrat"
+        android:onClick="GobackMenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.952"
@@ -249,13 +251,13 @@
         android:layout_height="44dp"
         android:backgroundTint="@color/cf_orange"
         android:fontFamily="@font/montserrat"
+        android:onClick="savePoints"
         android:text="@string/save_points"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#0D47A1"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:onClick="savePoints"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

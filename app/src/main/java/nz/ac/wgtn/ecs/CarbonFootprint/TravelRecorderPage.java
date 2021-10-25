@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -31,6 +32,11 @@ public class TravelRecorderPage extends BaseActivity {
         textView.setText(userName);
     }
 
+
+    public void GobackMenu(View view){
+        Intent intent = new Intent(this, MenuPage.class);
+        startActivity(intent);
+    }
 
     public void carButton(View view){
         view.setBackgroundColor(getResources().getColor(R.color.black, null));

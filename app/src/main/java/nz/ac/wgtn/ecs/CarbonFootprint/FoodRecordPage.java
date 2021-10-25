@@ -86,6 +86,11 @@ public class FoodRecordPage extends BaseActivity {
         text.setText(Double.toString(totalFoodPoints));
     }
 
+    public void GobackMenu(View view){
+        Intent intent = new Intent(this, MenuPage.class);
+        startActivity(intent);
+    }
+
     public void savePoints(View view) {
         myDbHelper.updateFoodPoints(userID, totalFoodPoints);
         Intent i = new Intent(this, CarbonFootprintRecorder.class);

@@ -36,6 +36,11 @@ public class SplashPage extends BaseActivity {
         }
     }
 
+    public void GobackMenu(View view){
+        Intent intent = new Intent(this, MenuPage.class);
+        startActivity(intent);
+    }
+
     public void getStartedButtonClick(View view){
         Intent intent = new Intent(this, LoginPage.class);
         startActivity(intent);

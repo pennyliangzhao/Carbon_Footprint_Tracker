@@ -28,7 +28,6 @@ public class SharePage extends BaseActivity {
     }
 
     public void share(View view) {
-
 //        ImageButton fb = findViewById(R.id.imageButtonFacebook);
 //        ImageButton twi = findViewById(R.id.imageButton7);
 //        ImageButton ins = findViewById(R.id.imageButton6);
@@ -40,6 +39,12 @@ public class SharePage extends BaseActivity {
 //        ShareLinkContent content = new ShareLinkContent.Builder()
 //                .setContentUrl(Uri.parse("https://developers.facebook.com"))
 //                .build();
+    }
+
+
+    public void GobackMenu(View view){
+        Intent intent = new Intent(this, MenuPage.class);
+        startActivity(intent);
     }
 
     public void shareFacebook(View view) {

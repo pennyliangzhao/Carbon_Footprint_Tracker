@@ -22,6 +22,11 @@ public class RemindersAlertPage extends BaseActivity {
         textView.setText(userName);
     }
 
+    public void GobackMenu(View view){
+        Intent intent = new Intent(this, MenuPage.class);
+        startActivity(intent);
+    }
+
     public void bannerOnClick(View view) {
         openActivity(this, WebViewActivity.class, "https://www.nytimes.com/guides/year-of-living-better/how-to-reduce-your-carbon-footprint");
     }
