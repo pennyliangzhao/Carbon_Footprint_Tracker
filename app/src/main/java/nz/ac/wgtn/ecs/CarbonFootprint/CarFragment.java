@@ -94,7 +94,7 @@ public class CarFragment extends Fragment {
 
     private void spinners(View view) {
         String[] values =
-                {"Diesel", "Petrol", "Hybrid", "Full EV",};
+                {getString(R.string.diesel),getString(R.string.petrol),getString(R.string.hybrid),getString(R.string.full_ev)};
         spinner = (Spinner) view.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
