@@ -13,31 +13,37 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class FoodRecordPage extends BaseActivity {
-    private int totalFoodPoints = 0;
     private static final int HEAVY_MEAT_POINTS = 27;
     private static final int MEDIUM_MEAT_POINTS = 12;
     private static final int LIGHT_MEAT_POINTS = 8;
     private static final int VEGETARIAN_POINTS = 3;
     private static final int VEGAN_POINTS = 2;
-
-    private TextView textView;
-
     MyDbAdapter myDbHelper;
+    private int totalFoodPoints;
+    private TextView text;
     private int initialFoodPoints = 0;
-    int foodPoints;
+    private int foodPoints;
+    private int userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_record_page);
-        textView = findViewById(R.id.totalFoodPoints);
+
+        text = findViewById(R.id.totalFoodPoints);
 
 
-//        //Get the user name from the SharedPreferences
-//        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        String userName = preferences.getString("current_username","userName");
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userID = preferences.getInt("current_user_id", 0);
+
+//        String userName = preferences.getString("current_user", "userName");
 //        TextView textView = findViewById(R.id.userName);
 //        textView.setText(userName);
+
+        myDbHelper = new MyDbAdapter(this);
+        //Get the initial foodPoints
+        foodPoints = myDbHelper.getFoodPoints(userID);
+
     }
 
     public void onCheckboxClicked(View view) {
@@ -73,30 +79,21 @@ public class FoodRecordPage extends BaseActivity {
                 } else {
                     totalFoodPoints -= VEGAN_POINTS;
                 }
-                textView.setText(Double.toString(totalFoodPoints));
+                text.setText(Double.toString(totalFoodPoints));
         }
     }
 
     public void calculatePoints(View view) {
-        textView.setText(Double.toString(totalFoodPoints));
+        text.setText(Double.toString(totalFoodPoints));
     }
 
     public void savePoints(View view) {
-        //updatePoints(view);
-        String foodPoints = String.valueOf(totalFoodPoints);
+
+        myDbHelper.updateFoodPoints(userID, totalFoodPoints);
+        String pointsFood = String.valueOf((totalFoodPoints));
         Intent i = new Intent(this, CarbonFootprintRecorder.class);
-        i.putExtra("pointsFood",  foodPoints);
         startActivity(i);
     }
 
-    @SuppressLint("Range")
-    public int updatePoints(View view) {
-        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
-        String[] whereArgs = {String.valueOf(initialFoodPoints)};
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(MyDbAdapter.myDbHelper.FOOD_POINTS, foodPoints);
-        int count = db.update(MyDbAdapter.myDbHelper.TABLE_NAME, contentValues, MyDbAdapter.myDbHelper.FOOD_POINTS + " = ?", whereArgs);
-        return count;
-    }
 
 }

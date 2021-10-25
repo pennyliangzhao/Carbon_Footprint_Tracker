@@ -83,7 +83,6 @@ public class CarFragment extends Fragment {
                 myDbHelper.updateTravelPoints(userID, computePoints());
                 String pointsCar = String.valueOf(computePoints());
                 Intent i = new Intent(getActivity(), CarbonFootprintRecorder.class);
-                i.putExtra("pointsCar", pointsCar);
                 startActivity(i);
             }
         }));
@@ -176,12 +175,6 @@ public class CarFragment extends Fragment {
         return pointFuelType;
     }
 
-//    @SuppressLint("Range")
-//    public int updatePoints(View view) {
-//        int travelPoint = (int) computePoints();
-//        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
-//        return travelPoints = myDbHelper.updatePoints(initialPoints, computePoints());
-//    }
 }
 
 
