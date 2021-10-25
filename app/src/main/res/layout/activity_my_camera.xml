@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cf_green"
-    tools:context=".ProfilePage">
+    tools:context=".MyCameraActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/_john"
-            android:onClick="profileOneClick" />
+            android:onClick="profileOneClick"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/profile2"
@@ -29,7 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/_mary"
-            android:onClick="profileTwoClick" />
+            android:onClick="profileTwoClick"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/button1"
