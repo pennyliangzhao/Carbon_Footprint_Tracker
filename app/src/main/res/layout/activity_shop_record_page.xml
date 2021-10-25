@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cf_green"
-    android:onClick="GobackMenu"
+    android:onClick="goBackMenu"
     tools:context=".ShopRecordPage">
 
     <TextView
@@ -151,7 +151,7 @@
         android:layout_height="48dp"
         android:contentDescription="@string/avatar"
         android:fontFamily="@font/montserrat"
-        android:onClick="GobackMenu"
+        android:onClick="goBackMenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.952"

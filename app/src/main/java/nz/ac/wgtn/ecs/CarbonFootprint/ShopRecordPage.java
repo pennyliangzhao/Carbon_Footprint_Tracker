@@ -89,7 +89,7 @@ public class ShopRecordPage extends BaseActivity {
         startActivity(i);
     }
 
-    public void GobackMenu(View view){
+    public void goBackMenu(View view){
         Intent intent = new Intent(this, MenuPage.class);
         startActivity(intent);
     }
