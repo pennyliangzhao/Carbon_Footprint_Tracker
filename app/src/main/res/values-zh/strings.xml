@@ -79,7 +79,7 @@
     <string name="total_shop_points">购物分数汇总</string>
     <string name="dark_mode">夜晚模式</string>
     <string name="light_mode">白天模式</string>
-    <string name="English">英语模式</string>
+    <string name="English">English</string>
     <string name="Chinese">中文模式</string>
     <string name="invalid_input">您输入的密码或用户名有误</string>
     <string name="enter">请输入您的用户名及密码</string>
@@ -108,4 +108,6 @@
     <string name="suv">SUV</string>
     <string name="van">卡车</string>
     <string name="update">加载</string>
+    <string name="update_username">更新用户姓名</string>
+    <string name="update_password">更新用户密码</string>
 </resources>
