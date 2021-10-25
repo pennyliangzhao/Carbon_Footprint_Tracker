@@ -13,7 +13,7 @@
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_logout_page.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_menu_page.xml" value="0.22" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_my_camera.xml" value="0.10833333333333334" />
-        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_points_page.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_points_page.xml" value="0.22" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_profile_page.xml" value="0.22" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_profile_page2.xml" value="0.10833333333333334" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_register_page.xml" value="0.22" />
@@ -34,6 +34,27 @@
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/fragment_walk.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/action_menu.xml" value="0.1" />
         <entry key="..\:/Users/crdgo/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/menu/popup_menu.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_action_recorder_page.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_carbon_footprint_recorder.xml" value="0.1796875" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_food_record_page.xml" value="0.1796875" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_login_page.xml" value="0.22" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_logout_page.xml" value="0.22" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_menu_page.xml" value="0.22" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_my_camera.xml" value="0.1" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_profile_page.xml" value="0.22" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_register_page.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_reminders_alert_page.xml" value="0.1" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_share_page.xml" value="0.1" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_shop_record_page.xml" value="0.1" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_splash_page.xml" value="0.1" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_travel_recorder_page.xml" value="0.10597826086956522" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_update.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/activity_web_view.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/fragment_bike.xml" value="0.1796875" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/fragment_car.xml" value="0.1796875" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/fragment_plane.xml" value="0.1796875" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/fragment_train.xml" value="0.1796875" />
+        <entry key="..\:/Users/liuziyu/AndroidStudioProjects/CFPgithub/app/src/main/res/layout/fragment_walk.xml" value="0.1796875" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_action_recorder_page.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_carbon_footprint_recorder.xml" value="0.108984375" />
         <entry key="..\:/Users/zhaolian2/AndroidStudioProjects/CarbonFootprintTracker/app/src/main/res/layout/activity_food_record_page.xml" value="0.13333333333333333" />

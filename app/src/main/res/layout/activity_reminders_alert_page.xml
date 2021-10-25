@@ -165,7 +165,7 @@
         android:layout_height="49dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
-        android:text="@string/plant_a_tree"
+        android:text="@string/plant_trees"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#009688"
