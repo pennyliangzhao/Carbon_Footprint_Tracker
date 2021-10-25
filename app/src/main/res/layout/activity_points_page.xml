@@ -12,6 +12,7 @@
         android:id="@+id/userName"
         android:layout_width="100dp"
         android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
         android:fontFamily="@font/montserrat"
         android:justificationMode="inter_word"
         android:text="@string/textview"
@@ -86,6 +87,7 @@
         android:id="@+id/avatar"
         android:layout_width="54dp"
         android:layout_height="48dp"
+
         android:contentDescription="@string/avatar"
         android:fontFamily="@font/montserrat"
         android:onClick="GobackMenu"
