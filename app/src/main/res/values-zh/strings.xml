@@ -36,7 +36,7 @@
     <string name="setting_name">sample@sample.com</string>
     <string name="setting_password">**********</string>
     <string name="action_set_in">功能设置</string>
-    <string name="contribution">感谢您对碳环保的贡献</string>
+    <string name="contribution">感谢您对低碳环保的贡献</string>
     <string name="log_out_application">退出页</string>
     <string name="log_out_image">退出图片</string>
     <string name="travel">行程</string>
@@ -107,7 +107,15 @@
     <string name="small">小型</string>
     <string name="suv">SUV</string>
     <string name="van">卡车</string>
-    <string name="update">加载</string>
+    <string name="update">已加载</string>
     <string name="update_username">更新用户姓名</string>
     <string name="update_password">更新用户密码</string>
+    <string name="old_username">旧用户名</string>
+    <string name="new_username">新用户名</string>
+    <string name="old_password">旧密码</string>
+    <string name="new_password">新密码</string>
+    <string name="enter_data">输入数据</string>
+    <string name="unsuccessful">未成功</string>
+    <string name="updated">已更新</string>
+    <string name="view_data">查看数据</string>
 </resources>
