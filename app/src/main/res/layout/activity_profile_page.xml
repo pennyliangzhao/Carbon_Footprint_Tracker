@@ -21,14 +21,15 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="80dp" />
+            android:layout_height="40dp" />
 
         <ImageView
             android:id="@+id/imageViewAvatar"
             android:layout_width="match_parent"
             android:layout_height="122dp"
             android:onClick="avatarBTN"
-            app:srcCompat="@drawable/girl" />
+            app:srcCompat="@drawable/girl"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Space
             android:layout_width="match_parent"
@@ -68,74 +69,63 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/setting_name"
-            android:inputType="textEmailAddress" />
+            android:hint="old username"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/newusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/setting_name"
-            android:inputType="textEmailAddress" />
+            android:hint="new username"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/oldpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/setting_password"
-            android:inputType="textPassword" />
+            android:hint="old password"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/newpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/setting_password"
-            android:inputType="textPassword" />
+            android:hint="new password"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="1dp" />
-
-        <LinearLayout
+        <Button
+            android:id="@+id/updateUserName"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="@color/cf_orange"
+            android:onClick="updateUserName"
+            android:text="@string/update_username"
+            android:textStyle="normal|bold" />
 
-            <Button
-                android:id="@+id/updateUserName"
-                android:layout_width="276dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editText3"
-                android:layout_alignStart="@+id/button4"
-                android:layout_alignLeft="@+id/button4"
-                android:layout_marginTop="13dp"
-                android:backgroundTint="@color/cf_orange"
-                android:onClick="updateUserName"
-                android:text="@string/update_username"
-                android:textStyle="normal|bold"
-                style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:id="@+id/updatePassWord"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="@color/cf_orange"
+            android:onClick="updatePassword"
+            android:text="@string/update_password"
+            android:textStyle="normal|bold" />
 
 
-            <Button
-                android:id="@+id/updatePassWord"
-                android:layout_width="118dp"
-                android:layout_height="75dp"
-                android:layout_below="@+id/editText3"
-                android:layout_alignLeft="@+id/button4"
-                android:layout_marginTop="100dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/cf_orange"
-                android:onClick="updatePassword"
-                android:text="@string/update_password"
-                android:textStyle="normal|bold"
-                style="?android:attr/buttonBarButtonStyle" />
-
-        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

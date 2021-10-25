@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 public class RegisterPage extends AppCompatActivity {
-    EditText Name, Pass, updateold, updatenew, delete;
+    EditText Name, Pass;
     MyDbAdapter helper;
     private double points = 0;
 
@@ -19,7 +19,6 @@ public class RegisterPage extends AppCompatActivity {
         setContentView(R.layout.activity_register_page);
         Name = (EditText) findViewById(R.id.editName);
         Pass = (EditText) findViewById(R.id.editPass);
-        updateold = (EditText) findViewById(R.id.editText3);
 
         helper = new MyDbAdapter(this);
     }
