@@ -24,8 +24,9 @@ public class ShopRecordPage extends BaseActivity {
     private TextView textView;
 
     MyDbAdapter myDbHelper;
-    private int initialShopPoints = 0;
-    int shopPoints;
+    private TextView text;
+    private int shopPoints;
+    private int userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,12 @@ public class ShopRecordPage extends BaseActivity {
         textView = findViewById(R.id.total_shop_points);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userID = preferences.getInt("current_user_id", 0);
+
+        myDbHelper = new MyDbAdapter(this);
+        //Get the initial foodPoints
+        shopPoints = myDbHelper.getShopPoints(userID);
+
         String userName = preferences.getString("current_user","userName" );
         TextView textView = findViewById(R.id.userNameMessage);
         textView.setText(userName);
@@ -77,20 +84,9 @@ public class ShopRecordPage extends BaseActivity {
     }
 
     public void savePoints(View view) {
-        //updatePoints(view);
-        String shopPoints = String.valueOf(totalShopPoints);
+        myDbHelper.updateShopPoints(userID, (int) totalShopPoints);
         Intent i = new Intent(this, CarbonFootprintRecorder.class);
-        i.putExtra("pointsShop",  shopPoints);
         startActivity(i);
     }
 
-    @SuppressLint("Range")
-    public int updatePoints(View view) {
-        SQLiteDatabase db = myDbHelper.myhelper.getWritableDatabase();
-        String[] whereArgs = {String.valueOf(initialShopPoints)};
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(MyDbAdapter.myDbHelper.FOOD_POINTS, shopPoints);
-        int count = db.update(MyDbAdapter.myDbHelper.TABLE_NAME, contentValues, MyDbAdapter.myDbHelper.FOOD_POINTS + " = ?", whereArgs);
-        return count;
-    }
 }

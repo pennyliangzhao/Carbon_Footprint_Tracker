@@ -21,7 +21,6 @@ public class FoodRecordPage extends BaseActivity {
     MyDbAdapter myDbHelper;
     private int totalFoodPoints;
     private TextView text;
-    private int initialFoodPoints = 0;
     private int foodPoints;
     private int userID;
 
@@ -88,12 +87,8 @@ public class FoodRecordPage extends BaseActivity {
     }
 
     public void savePoints(View view) {
-
         myDbHelper.updateFoodPoints(userID, totalFoodPoints);
-        String pointsFood = String.valueOf((totalFoodPoints));
         Intent i = new Intent(this, CarbonFootprintRecorder.class);
         startActivity(i);
     }
-
-
 }

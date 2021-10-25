@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class CarbonFootprintRecorder extends BaseActivity {
     int travelPoints;
     int foodPoints;
+    int shopPoints;
     TextView tVC;
     TextView tVF;
     TextView tVS;
@@ -36,15 +37,11 @@ public class CarbonFootprintRecorder extends BaseActivity {
         foodPoints = myDbHelper.getFoodPoints(userID);
         tVF = findViewById(R.id.foodText);
         tVF.setText(String.valueOf(foodPoints));
-//
-//
-//
-//
-//        tVS = findViewById(R.id.shopText);
-//        tVS.setText("shop");
-//
-//
-//
+
+        shopPoints = myDbHelper.getShopPoints(userID);
+        tVS = findViewById(R.id.shopText);
+        tVS.setText(String.valueOf(shopPoints));
+
 //        tVA = findViewById(R.id.actionText);
 //        tVA.setText("pointsAction");
 
