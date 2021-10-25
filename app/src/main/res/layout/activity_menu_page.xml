@@ -147,21 +147,21 @@
             android:id="@+id/logout_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/log_out"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="620dp"
+            android:layout_marginTop="600dp"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/montserrat"
+            android:onClick="logoutButton"
             android:shadowColor="#000000"
             android:shadowDx="1.8"
             android:shadowDy="1.8"
             android:shadowRadius="1.6"
+            android:text="@string/log_out"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@color/cf_orange"
             android:textSize="28sp"
-            android:textStyle="bold"
-            android:onClick="logoutButton"/>
+            android:textStyle="bold" />
 
 
     </FrameLayout>
