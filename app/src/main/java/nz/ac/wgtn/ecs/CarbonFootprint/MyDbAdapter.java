@@ -138,6 +138,22 @@ public class MyDbAdapter {
         return points;
     }
 
+    public void updateShopPoints(int userID, int shopPoints) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.SHOP_POINTS, getShopPoints(userID) + shopPoints);
+
+        db.update(myDbHelper.TABLE_NAME, contentValues, myDbHelper.UID + "=" + userID, null);
+    }
+
+    public int getShopPoints(int userID) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + myDbHelper.TABLE_NAME + " WHERE " + myDbHelper.UID + " = " + userID, null);
+        cursor.moveToFirst();
+
+        int points = cursor.getInt(cursor.getColumnIndex(myDbHelper.SHOP_POINTS));
+        return points;
+    }
 
 
     static class myDbHelper extends SQLiteOpenHelper {
