@@ -21,9 +21,6 @@ import android.widget.TextView;
 
 public class CarFragment extends Fragment {
     MyDbAdapter myDbHelper;
-    SQLiteDatabase sqLiteDatabaseObj;
-    double initialPoints = 0;
-    double newPoints;
     private int travelPoints;
     private Button date;
     private Button calculatePoints;
@@ -42,12 +39,13 @@ public class CarFragment extends Fragment {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_car, container, false);
         date = view.findViewById(R.id.date);
+        carFragment = this;
+
         calculatePoints = view.findViewById(R.id.calculatePointsBtn);
         savePoints = view.findViewById(R.id.savePointsBtn);
         distance = view.findViewById(R.id.distanceInput);
         textview = view.findViewById(R.id.carPoints);
 
-        carFragment = this;
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
         userID = preferences.getInt("current_user_id", 0);
@@ -79,7 +77,6 @@ public class CarFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 myDbHelper.updateTravelPoints(userID, computePoints());
-                String pointsCar = String.valueOf(computePoints());
                 Intent i = new Intent(getActivity(), CarbonFootprintRecorder.class);
                 startActivity(i);
             }

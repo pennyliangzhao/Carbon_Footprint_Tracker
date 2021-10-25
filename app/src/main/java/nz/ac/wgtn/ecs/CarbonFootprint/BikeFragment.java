@@ -77,12 +77,7 @@ public class BikeFragment extends Fragment {
                 startActivity(i);
             }
         }));
-
-
-
         return view;
-
-
     }
 
     public void updateDateTime(int year, int month, int day) {
