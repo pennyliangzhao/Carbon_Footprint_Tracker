@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/contributionMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="336dp"
+        android:layout_height="93dp"
         android:fontFamily="@font/montserrat"
         android:shadowRadius="1.6"
         android:text="@string/contribution"
@@ -20,10 +20,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.12" />
 
     <ImageView
         android:id="@+id/logOutIcon"
