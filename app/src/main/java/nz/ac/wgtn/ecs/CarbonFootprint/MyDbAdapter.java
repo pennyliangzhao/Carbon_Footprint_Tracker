@@ -121,6 +121,25 @@ public class MyDbAdapter {
         return points;
     }
 
+    public void updateFoodPoints(int userID, int foodPoints) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.FOOD_POINTS, getFoodPoints(userID) + foodPoints);
+
+        db.update(myDbHelper.TABLE_NAME, contentValues, myDbHelper.UID + "=" + userID, null);
+    }
+
+    public int getFoodPoints(int userID) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + myDbHelper.TABLE_NAME + " WHERE " + myDbHelper.UID + " = " + userID, null);
+        cursor.moveToFirst();
+
+        int points = cursor.getInt(cursor.getColumnIndex(myDbHelper.FOOD_POINTS));
+        return points;
+    }
+
+
+
     static class myDbHelper extends SQLiteOpenHelper {
         static final String DATABASE_NAME = "myDatabase";    // Database Name
         static final String TABLE_NAME = "myTable";   // Table Name

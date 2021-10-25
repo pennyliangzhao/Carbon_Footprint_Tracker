@@ -10,9 +10,7 @@ import android.widget.TextView;
 
 public class CarbonFootprintRecorder extends BaseActivity {
     int travelPoints;
-    String pointsFood;
-    String pointsShop;
-    String pointsAction;
+    int foodPoints;
     TextView tVC;
     TextView tVF;
     TextView tVS;
@@ -30,28 +28,25 @@ public class CarbonFootprintRecorder extends BaseActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         userID = preferences.getInt("current_user_id", 0);
 
-        Intent travelIntent = getIntent();
-        //pointsCar = (travelIntent.getStringExtra("pointsCar"));
         travelPoints = myDbHelper.getTravelPoints(userID);
         tVC = findViewById(R.id.travelText);
         tVC.setText(String.valueOf(travelPoints));
 
 
-        Intent foodIntent = getIntent();
-        pointsFood = (foodIntent.getStringExtra("pointsFood"));
+        foodPoints = myDbHelper.getFoodPoints(userID);
         tVF = findViewById(R.id.foodText);
-        tVF.setText(pointsFood);
-
-
-        Intent shopIntent = getIntent();
-        pointsShop = (shopIntent.getStringExtra("pointsShop"));
-        tVS = findViewById(R.id.shopText);
-        tVS.setText(pointsShop);
-
-        Intent actionIntent = getIntent();
-        pointsAction = (actionIntent.getStringExtra("pointsAction"));
-        tVA = findViewById(R.id.actionText);
-        tVA.setText(pointsAction);
+        tVF.setText(String.valueOf(foodPoints));
+//
+//
+//
+//
+//        tVS = findViewById(R.id.shopText);
+//        tVS.setText("shop");
+//
+//
+//
+//        tVA = findViewById(R.id.actionText);
+//        tVA.setText("pointsAction");
 
 
         //Get the user name from the SharedPreferences
