@@ -62,6 +62,22 @@ public class PointsPage extends BaseActivity {
             actionPoints = 1;
         }
 
+        travelPoints = myDbHelper.getTravelPoints(userID);
+        if(travelPoints == 0){
+            travelPoints = 1;
+        }
+        foodPoints = myDbHelper.getFoodPoints(userID);
+        if(foodPoints == 0){
+            foodPoints = 1;
+        }
+        shopPoints = myDbHelper.getShopPoints(userID);
+        if(shopPoints == 0){
+            shopPoints = 1;
+        }
+        actionPoints = myDbHelper.getActionPoints(userID);
+        if (actionPoints == 0){
+            actionPoints = 1;
+        }
 
 
         tVC = findViewById(R.id.textTravel);
@@ -107,6 +123,12 @@ public class PointsPage extends BaseActivity {
         chart.startAnimation();
 
     }
+
+    public void GoRecorder(View view){
+        Intent i = new Intent(this, CarbonFootprintRecorder.class);
+        startActivity(i);
+    }
+
 
     public void recordPoints(View view){
         Intent i = new Intent(this, CarbonFootprintRecorder.class);
