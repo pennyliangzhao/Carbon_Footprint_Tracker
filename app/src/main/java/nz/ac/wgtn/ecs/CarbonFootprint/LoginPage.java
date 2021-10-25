@@ -110,7 +110,7 @@ public class LoginPage extends BaseActivity {
         if (TempPassword.equalsIgnoreCase(PasswordHolder)) {
             Toast.makeText(LoginPage.this,R.string.login_successfully, Toast.LENGTH_LONG).show();
             // Going to Dashboard activity after login success message.
-            Intent intent = new Intent(this, PointsPage.class);
+            Intent intent = new Intent(this, MenuPage.class);
 
             // Sending Email to Dashboard Activity using intent.
             intent.putExtra(UserEmail, EmailHolder);

@@ -9,6 +9,42 @@
     tools:context=".SplashPage">
 
     <TextView
+        android:id="@+id/userName"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/montserrat"
+        android:justificationMode="inter_word"
+        android:text="@string/textview"
+        android:textAllCaps="false"
+        android:textColor="#004D40"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/montserrat"
+        android:justificationMode="inter_word"
+        android:text="@string/good_afternoon"
+        android:textAllCaps="false"
+        android:textColor="#004D40"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
         android:id="@+id/textTravel"
         android:layout_width="110dp"
         android:layout_height="45dp"
@@ -24,50 +60,27 @@
         app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintVertical_bias="0.658" /><![CDATA[
 
-    <TextView
-        android:id="@+id/userNameMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:justificationMode="inter_word"
-        android:text="TextView"
-        android:textAllCaps="false"
-        android:textColor="#004D40"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
-        app:layout_constraintVertical_bias="0.047" />
+    app:layout_constraintVertical_bias="0.047" />
 
-    <TextView
-        android:id="@+id/goodAfternoonMessage"
-        android:layout_width="119dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView5"
-        android:layout_width="87dp"
-        android:layout_height="45dp"
-        android:fontFamily="@font/montserrat"
-        android:justificationMode="inter_word"
-        android:text="@string/good_afternoon"
-        android:textAllCaps="false"
-        android:textColor="#004D40"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061" />
-        app:layout_constraintVertical_bias="0.046" />
+
+
+
+
+
+
+
+
+    app:layout_constraintVertical_bias="0.046" />
+
+
+
+
+
+
+
+    ]]>
 
     <ImageView
         android:id="@+id/avatar"
@@ -77,10 +90,10 @@
         android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063"
+        app:layout_constraintVertical_bias="0.039"
         app:srcCompat="@drawable/girl" />
 
     <org.eazegraph.lib.charts.PieChart

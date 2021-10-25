@@ -42,7 +42,7 @@ public class ShopRecordPage extends BaseActivity {
         shopPoints = myDbHelper.getShopPoints(userID);
 
         String userName = preferences.getString("current_user","userName" );
-        TextView textView = findViewById(R.id.userNameMessage);
+        TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
     }
 

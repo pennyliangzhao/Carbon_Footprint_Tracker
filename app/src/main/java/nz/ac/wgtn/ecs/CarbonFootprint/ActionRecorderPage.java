@@ -39,9 +39,9 @@ public class ActionRecorderPage extends BaseActivity {
         //Get the initial foodPoints
         actionPoints = myDbHelper.getActionPoints(userID);
 
-//        String userName = preferences.getString("current_user", "userName");
-//        TextView textView = findViewById(R.id.userName);
-//        textView.setText(userName);
+        String userName = preferences.getString("current_user","userName" );
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
     }
 
     public void onCheckboxClicked(View view) {

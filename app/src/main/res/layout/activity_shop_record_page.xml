@@ -7,6 +7,42 @@
     android:background="@color/cf_green"
     tools:context=".ShopRecordPage">
 
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/montserrat"
+        android:justificationMode="inter_word"
+        android:text="@string/good_afternoon"
+        android:textAllCaps="false"
+        android:textColor="#004D40"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/montserrat"
+        android:justificationMode="inter_word"
+        android:text="@string/textview"
+        android:textAllCaps="false"
+        android:textColor="#004D40"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
     <CheckBox
         android:id="@+id/shop_cosmetics_retailers"
         android:layout_width="268dp"
@@ -106,42 +142,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.438" />
-
-    <TextView
-        android:id="@+id/goodAfternoonMessage"
-        android:layout_width="119dp"
-        android:layout_height="35dp"
-        android:fontFamily="@font/montserrat"
-        android:justificationMode="inter_word"
-        android:text="@string/good_afternoon"
-        android:textAllCaps="false"
-        android:textColor="#004D40"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <TextView
-        android:id="@+id/userNameMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:justificationMode="inter_word"
-        android:text="TextView"
-        android:textAllCaps="false"
-        android:textColor="#004D40"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
 
     <ImageView
         android:id="@+id/avatar"

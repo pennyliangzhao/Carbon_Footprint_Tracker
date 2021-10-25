@@ -35,9 +35,9 @@ public class FoodRecordPage extends BaseActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         userID = preferences.getInt("current_user_id", 0);
 
-//        String userName = preferences.getString("current_user", "userName");
-//        TextView textView = findViewById(R.id.userName);
-//        textView.setText(userName);
+        String userName = preferences.getString("current_user","userName" );
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
 
         myDbHelper = new MyDbAdapter(this);
         //Get the initial foodPoints
