@@ -5,7 +5,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cf_green"
+android:background="@color/cf_green"
     tools:context=".SplashPage">
 
     <TextView
@@ -205,8 +205,8 @@
         android:background="#00BFFF"
         android:fontFamily="@font/montserrat"
         android:text="@string/action"
-        android:textAlignment="center"
-        android:textColor="#EF5350"
+        android:textAlignment="viewStart"
+        android:textColor="#B71C1C"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -224,7 +224,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/action"
         android:textAlignment="viewEnd"
-        android:textColor="#EF5350"
+        android:textColor="#B71C1C"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

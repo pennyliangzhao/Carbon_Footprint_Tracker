@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/cf_orange"
         android:onClick="viewdata"
-        android:text="view_data"
+        android:text="@string/view_data"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"

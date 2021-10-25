@@ -108,6 +108,12 @@
     <string name="update">update</string>
     <string name="update_username">update username</string>
     <string name="update_password">update password</string>
-
-
+    <string name="old_username">old username</string>
+    <string name="new_username">new username</string>
+    <string name="old_password">old password</string>
+    <string name="new_password">new password</string>
+    <string name="enter_data">Enter Data</string>
+    <string name="unsuccessful">Unsuccessful</string>
+    <string name="updated">Updated</string>
+    <string name="view_data">View Data</string>
 </resources>
