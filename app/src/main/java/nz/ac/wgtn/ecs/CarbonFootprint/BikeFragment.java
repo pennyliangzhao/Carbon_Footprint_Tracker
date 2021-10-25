@@ -15,6 +15,7 @@ public class BikeFragment extends Fragment {
     private Button date;
     private DatePickerDialog datePickerDialog;
     private BikeFragment bikeFragment;
+    private int travelPoints;
 
 
     @Override

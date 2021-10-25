@@ -32,7 +32,7 @@ public class MyDbAdapter {
 //            insertData(entry.getValue().getUserName(), entry.getValue().getPassword(), entry.getValue().getPoints());
 //        }
 
-        insertData("rhea", "567", 50);
+        insertData("rhea", "567", 50, 20);
     }
 
     public long insertData(String name, String pass, double points) {
@@ -41,6 +41,18 @@ public class MyDbAdapter {
         contentValues.put(myDbHelper.NAME, name);
         contentValues.put(myDbHelper.MyPASSWORD, pass);
         contentValues.put(myDbHelper.TRAVEL_POINTS, points);
+        long id = dbb.insert(myDbHelper.TABLE_NAME, null, contentValues);
+        return id;
+    }
+
+    public long insertData(String name, String pass, double points, int shopPoints) {
+        SQLiteDatabase dbb = myhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDbHelper.NAME, name);
+        contentValues.put(myDbHelper.MyPASSWORD, pass);
+        contentValues.put(myDbHelper.TRAVEL_POINTS, points);
+        contentValues.put(myDbHelper.SHOP_POINTS, shopPoints);
+        contentValues.put(myDbHelper.SHOP_POINTS, shopPoints);
         long id = dbb.insert(myDbHelper.TABLE_NAME, null, contentValues);
         return id;
     }
@@ -146,7 +158,7 @@ public class MyDbAdapter {
 //        static final String CREATE_TABLE_POINTS = "CREATE TABLE " + TABLE_NAME_2 +
 //                " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TRAVEL_POINTS  + FOOD_POINTS + SHOP_POINTS+ ACTION_POINTS + ");";
 
-        static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME_2;
+        static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
         Context context;
 

@@ -16,41 +16,51 @@ import org.eazegraph.lib.models.PieModel;
 
 public class PointsPage extends BaseActivity {
 
-    String pointsCar;
+    private String pointsCar;
+    private MyDbAdapter myDbHelper;
     String pointsFood;
     private Button click;
     private PieChart chart;
     // private TextView pointsCar;
     private int travel;
-    private int food;
+    private int food =50;
     private int shop = 30;
     private int action = 10;
     private int i1;
     private int i2;
     private int i3;
     private int i4;
+    private int userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points_page);
 
-
-
-        //get username
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username", "userName");
+        String userName = preferences.getString("current_user", "userName");
+        userID = preferences.getInt("current_user_id", 0);
         TextView textView = findViewById(R.id.userName);
         textView.setText(userName);
 
+        //Get DB instance
+        myDbHelper = new MyDbAdapter(this);
 
-        Intent carIntent = getIntent();
-        pointsCar = carIntent.getStringExtra("pointsCar");
-        travel = Integer.parseInt(pointsCar);
 
-        Intent foodIntent = getIntent();
-        pointsFood = foodIntent.getStringExtra("pointsFood");
-        food = Integer.parseInt(pointsFood);
+        travel = myDbHelper.getTravelPoints(userID);
+
+        //get username
+       // SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+
+
+//        Intent carIntent = getIntent();
+//        pointsCar = carIntent.getStringExtra("pointsCar");
+//        travel = Integer.parseInt(pointsCar);
+//
+//        Intent foodIntent = getIntent();
+//        pointsFood = foodIntent.getStringExtra("pointsFood");
+//        food = Integer.parseInt(pointsFood);
 
 
         int total = travel + food + shop + action;

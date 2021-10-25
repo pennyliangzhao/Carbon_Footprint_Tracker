@@ -10,12 +10,14 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 
-public class TravelRecorderPage extends AppCompatActivity {
+public class TravelRecorderPage extends BaseActivity {
+    private int travelPoints;
     private Fragment fragmentCar = new CarFragment();
     private Fragment fragmentBike = new BikeFragment();
     private Fragment fragmentPlane = new PlaneFragment();
     private Fragment fragmentTrain = new TrainFragment();
     private Fragment fragmentWalk = new WalkFragment();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

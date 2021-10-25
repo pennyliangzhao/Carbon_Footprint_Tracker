@@ -51,10 +51,12 @@ public class CarFragment extends Fragment {
 
         carFragment = this;
 
-        myDbHelper = new MyDbAdapter(view.getContext());
-
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
         userID = preferences.getInt("current_user_id", 0);
+
+        myDbHelper = new MyDbAdapter(view.getContext());
+        //Get the initial travelPoints
+        travelPoints = myDbHelper.getTravelPoints(userID);
 
         spinners(view);
 
