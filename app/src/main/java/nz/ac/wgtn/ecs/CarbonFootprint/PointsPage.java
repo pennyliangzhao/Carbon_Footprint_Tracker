@@ -44,6 +44,9 @@ public class PointsPage extends BaseActivity {
         myDbHelper = new MyDbAdapter(this);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         userID = preferences.getInt("current_user_id", 0);
+        String userName = preferences.getString("current_user","userName" );
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
 
         travelPoints = myDbHelper.getTravelPoints(userID);
         tVC = findViewById(R.id.textTravel);

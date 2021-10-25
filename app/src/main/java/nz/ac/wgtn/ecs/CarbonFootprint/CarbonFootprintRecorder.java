@@ -29,6 +29,9 @@ public class CarbonFootprintRecorder extends BaseActivity {
         myDbHelper = new MyDbAdapter(this);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         userID = preferences.getInt("current_user_id", 0);
+        String userName = preferences.getString("current_user","userName" );
+        TextView textView = findViewById(R.id.userName);
+        textView.setText(userName);
 
         travelPoints = myDbHelper.getTravelPoints(userID);
         tVC = findViewById(R.id.travelText);
@@ -48,11 +51,6 @@ public class CarbonFootprintRecorder extends BaseActivity {
         tVA.setText(String.valueOf(actionPoints));
 
 
-        //Get the user name from the SharedPreferences
-        //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("current_username", "userName");
-        TextView textView = findViewById(R.id.userName);
-        textView.setText(userName);
     }
 
     public void onRadioButtonClicked(View view) {
