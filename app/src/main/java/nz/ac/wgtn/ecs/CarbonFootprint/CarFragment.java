@@ -1,6 +1,5 @@
 package nz.ac.wgtn.ecs.CarbonFootprint;
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,7 +17,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class CarFragment extends Fragment {
@@ -58,7 +56,7 @@ public class CarFragment extends Fragment {
         //Get the initial travelPoints
         travelPoints = myDbHelper.getTravelPoints(userID);
 
-        spinners(view);
+        distance(view);
 
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +89,7 @@ public class CarFragment extends Fragment {
 
     }
 
-    private void spinners(View view) {
+    private void distance(View view) {
         String[] values =
                 {getString(R.string.diesel),getString(R.string.petrol),getString(R.string.hybrid),getString(R.string.full_ev)};
         spinner = (Spinner) view.findViewById(R.id.spinner);
@@ -123,17 +121,17 @@ public class CarFragment extends Fragment {
 
         pointsFromVehicleSize(vehicleSize);
 
-        spinners(distanceTravelled);
+        distance(distanceTravelled);
 
         int totalPointsTravel = pointsFromFuelType(fuelType) +
-                pointsFromVehicleSize(vehicleSize) + spinners(distanceTravelled);
+                pointsFromVehicleSize(vehicleSize) + distance(distanceTravelled);
 
 
         return totalPointsTravel;
 
     }
 
-    private int spinners(int distanceTravelled) {
+    private int distance(int distanceTravelled) {
         int pointDistanceTravelled;
         if (distanceTravelled <= 20) {
             pointDistanceTravelled = 10;
